@@ -241,10 +241,10 @@ constant: 	TRUE_CONST {
 			SetString($$, yytext);
 		};
 
-type: INT 	{$$ = CNT(type_n, INT_TYPE, 1, $1);}|
-	FLOAT 	{$$ = CNT(type_n, FLOAT_TYPE, 1, $1);}|
-	BOOL 	{$$ = CNT(type_n, BOOL_TYPE, 1, $1);}|
-	VOID 	{$$ = CNT(type_n, VOID_TYPE, 1, $1);}|
+type: INT 	{$$ = CNT(type_n, INT_TYPE, 0);}|
+	FLOAT 	{$$ = CNT(type_n, FLOAT_TYPE, 0);}|
+	BOOL 	{$$ = CNT(type_n, BOOL_TYPE, 0);}|
+	VOID 	{$$ = CNT(type_n, VOID_TYPE, 0);}|
 	type ARRAY index_list {$$ = CNT(type_n, ARRAY_TYPE, 2, $1, $3);};
 
 index_list: index_list '[' index ']' {$$ = CN(index_list_n, 2, $1, $3);}|
