@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Test Results</title>
+<style>
+iframe {
+		border-style:solid;
+		border-width:1px;
+	   }
+body {font-family:sans;}
+button {
+	background:none;
+	border:none;
+	}
+button:hover{
+	text-decoration:underline;
+	}
+</style>
+<script>
+myLoad = function(file, stage){
+document.getElementById('diffframe').src = ("testOutput/" + file + "." + stage + ".html")
+document.getElementById('inputframe').src = ("vsl_programs/" + file + ".vsl")
+}
+</script>
+</head>
+
+<body>
+<div style="width:15%;float:left;font-family:sans;">
+<h1>Test Report</h1>
+
+
+The output was incorrect for the following files.
+Click to see difference between your output and the correct output. <br>
+
+<button onClick=myLoad("adding","s3")>adding</button> <br>
+<button onClick=myLoad("arithmetic_float","s3")>arithmetic_float</button> <br>
+<button onClick=myLoad("arithmetic_int","s3")>arithmetic_int</button> <br>
+<button onClick=myLoad("array_alt_declaration","s3")>array_alt_declaration</button> <br>
+<button onClick=myLoad("array_forloop","s3")>array_forloop</button> <br>
+<button onClick=myLoad("array_hard","s3")>array_hard</button> <br>
+<button onClick=myLoad("array_simple","s3")>array_simple</button> <br>
+<button onClick=myLoad("compare_float","s3")>compare_float</button> <br>
+<button onClick=myLoad("compare_int","s3")>compare_int</button> <br>
+<button onClick=myLoad("euclid","s3")>euclid</button> <br>
+<button onClick=myLoad("expressions","s3")>expressions</button> <br>
+<button onClick=myLoad("fibonacci_iterative","s3")>fibonacci_iterative</button> <br>
+<button onClick=myLoad("fibonacci_recursive","s3")>fibonacci_recursive</button> <br>
+<button onClick=myLoad("for_hard","s3")>for_hard</button> <br>
+<button onClick=myLoad("for_simple","s3")>for_simple</button> <br>
+<button onClick=myLoad("function_hard","s3")>function_hard</button> <br>
+<button onClick=myLoad("function_medium","s3")>function_medium</button> <br>
+<button onClick=myLoad("function_simple","s3")>function_simple</button> <br>
+<button onClick=myLoad("hello","s3")>hello</button> <br>
+<button onClick=myLoad("if_hard","s3")>if_hard</button> <br>
+<button onClick=myLoad("if_simple","s3")>if_simple</button> <br>
+<button onClick=myLoad("logical","s3")>logical</button> <br>
+<button onClick=myLoad("matrix_multiply","s3")>matrix_multiply</button> <br>
+<button onClick=myLoad("maxmin","s3")>maxmin</button> <br>
+<button onClick=myLoad("merge_sort","s3")>merge_sort</button> <br>
+<button onClick=myLoad("minimal","s3")>minimal</button> <br>
+<button onClick=myLoad("newton","s3")>newton</button> <br>
+<button onClick=myLoad("printing","s3")>printing</button> <br>
+<button onClick=myLoad("return","s3")>return</button> <br>
+<button onClick=myLoad("sorting","s3")>sorting</button> <br>
+<button onClick=myLoad("strings_and_comments","s3")>strings_and_comments</button> <br>
+<button onClick=myLoad("type_errors_arrays","s3")>type_errors_arrays</button> <br>
+<button onClick=myLoad("type_errors_assignment","s3")>type_errors_assignment</button> <br>
+<button onClick=myLoad("type_errors_functions","s3")>type_errors_functions</button> <br>
+<button onClick=myLoad("variables","s3")>variables</button> <br>
+<button onClick=myLoad("while_hard","s3")>while_hard</button> <br>
+<button onClick=myLoad("while_simple","s3")>while_simple</button> <br>
+</div>
+<div style="width:40%;float:right;padding:5px;">
+Input:<br>
+<iframe height=95% width=100% id="inputframe" src=""></iframe>
+</div>
+
+<div style="width:40%;float:right;padding:5px;">
+Diff: <br>
+<iframe height=95% width=100% id="diffframe" src=""></iframe>
+</div>
+</body>
+
+</html>

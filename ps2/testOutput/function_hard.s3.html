@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/function_hard.s3	2015-01-14 09:24:38.000000000 +0100</span>
+<span class="plus3">+++ testOutput/function_hard.s3	2015-01-28 14:04:10.907997136 +0100</span>
+<span class="at2">@@ -6,6 +6,7 @@</span>
+      (nil)
+      FUNCTION()()
+       TYPE(VOID)()
+<span class="plus">+       (nil)</span>
+       VARIABLE()("main")()
+       (nil)
+       STATEMENT_LIST()()
+<span class="at2">@@ -18,14 +19,17 @@</span>
+              STATEMENT()()
+               DECLARATION_STATEMENT()()
+                TYPE(INT)()
+<span class="plus">+                (nil)</span>
+                VARIABLE()("a")()
+             STATEMENT()()
+              DECLARATION_STATEMENT()()
+               TYPE(INT)()
+<span class="plus">+               (nil)</span>
+               VARIABLE()("b")()
+            STATEMENT()()
+             DECLARATION_STATEMENT()()
+              TYPE(INT)()
+<span class="plus">+              (nil)</span>
+              VARIABLE()("c")()
+           STATEMENT()()
+            ASSIGNMENT_STATEMENT()()
+<span class="at2">@@ -66,6 +70,7 @@</span>
+                 VARIABLE()("c")()
+     FUNCTION()()
+      TYPE(INT)()
+<span class="plus">+      (nil)</span>
+      VARIABLE()("func1")()
+      PARAMETER_LIST()()
+       VARIABLE_LIST()()
+<span class="at2">@@ -73,12 +78,15 @@</span>
+         VARIABLE_LIST()()
+          DECLARATION_STATEMENT()()
+           TYPE(INT)()
+<span class="plus">+           (nil)</span>
+           VARIABLE()("a")()
+         DECLARATION_STATEMENT()()
+          TYPE(INT)()
+<span class="plus">+          (nil)</span>
+          VARIABLE()("b")()
+        DECLARATION_STATEMENT()()
+         TYPE(INT)()
+<span class="plus">+         (nil)</span>
+         VARIABLE()("c")()
+      STATEMENT_LIST()()
+       STATEMENT_LIST()()
+<span class="at2">@@ -102,6 +110,7 @@</span>
+          STATEMENT()()
+           DECLARATION_STATEMENT()()
+            TYPE(INT)()
+<span class="plus">+            (nil)</span>
+            VARIABLE()("d")()
+         STATEMENT()()
+          ASSIGNMENT_STATEMENT()()
+<span class="at2">@@ -148,6 +157,7 @@</span>
+           VARIABLE()("d")()
+    FUNCTION()()
+     TYPE(INT)()
+<span class="plus">+     (nil)</span>
+     VARIABLE()("func2")()
+     PARAMETER_LIST()()
+      VARIABLE_LIST()()
+<span class="at2">@@ -155,12 +165,15 @@</span>
+        VARIABLE_LIST()()
+         DECLARATION_STATEMENT()()
+          TYPE(INT)()
+<span class="plus">+          (nil)</span>
+          VARIABLE()("a")()
+        DECLARATION_STATEMENT()()
+         TYPE(INT)()
+<span class="plus">+         (nil)</span>
+         VARIABLE()("b")()
+       DECLARATION_STATEMENT()()
+        TYPE(INT)()
+<span class="plus">+        (nil)</span>
+        VARIABLE()("c")()
+     STATEMENT_LIST()()
+      STATEMENT_LIST()()
+<span class="at2">@@ -184,6 +197,7 @@</span>
+         STATEMENT()()
+          DECLARATION_STATEMENT()()
+           TYPE(INT)()
+<span class="plus">+           (nil)</span>
+           VARIABLE()("d")()
+        STATEMENT()()
+         ASSIGNMENT_STATEMENT()()
+<span class="at2">@@ -230,6 +244,7 @@</span>
+          VARIABLE()("d")()
+   FUNCTION()()
+    TYPE(INT)()
+<span class="plus">+    (nil)</span>
+    VARIABLE()("func3")()
+    PARAMETER_LIST()()
+     VARIABLE_LIST()()
+<span class="at2">@@ -237,12 +252,15 @@</span>
+       VARIABLE_LIST()()
+        DECLARATION_STATEMENT()()
+         TYPE(INT)()
+<span class="plus">+         (nil)</span>
+         VARIABLE()("a")()
+       DECLARATION_STATEMENT()()
+        TYPE(INT)()
+<span class="plus">+        (nil)</span>
+        VARIABLE()("b")()
+      DECLARATION_STATEMENT()()
+       TYPE(INT)()
+<span class="plus">+       (nil)</span>
+       VARIABLE()("c")()
+    STATEMENT_LIST()()
+     STATEMENT_LIST()()
+<span class="at2">@@ -266,6 +284,7 @@</span>
+        STATEMENT()()
+         DECLARATION_STATEMENT()()
+          TYPE(INT)()
+<span class="plus">+          (nil)</span>
+          VARIABLE()("d")()
+       STATEMENT()()
+        ASSIGNMENT_STATEMENT()()</span>
+</pre>
+</body>
+</html>
