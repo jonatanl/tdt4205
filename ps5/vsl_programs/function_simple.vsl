@@ -1,0 +1,12 @@
+VOID FUNC main() START
+    INT a;
+    INT b;
+    a := 5;
+    b := func(a);
+    PRINT a, b;
+END
+
+INT FUNC func(INT x) START
+    PRINT x;
+    RETURN x;
+END

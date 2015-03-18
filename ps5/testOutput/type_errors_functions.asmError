@@ -1,0 +1,12 @@
+testOutput/type_errors_functions.s: Assembler messages:
+testOutput/type_errors_functions.s:1: Error: bad instruction `type error at:'
+testOutput/type_errors_functions.s:2: Error: bad instruction `assignment_statement'
+testOutput/type_errors_functions.s:3: Error: bad instruction `type error at:'
+testOutput/type_errors_functions.s:4: Error: bad instruction `assignment_statement'
+testOutput/type_errors_functions.s:5: Error: bad instruction `type error at:'
+testOutput/type_errors_functions.s:6: Error: bad instruction `expression (FUNC_CALL)'
+testOutput/type_errors_functions.s:7: Error: bad instruction `type error at:'
+testOutput/type_errors_functions.s:8: Error: bad instruction `expression (FUNC_CALL)'
+testOutput/type_errors_functions.s:9: Error: bad instruction `type error at:'
+testOutput/type_errors_functions.s:10: Error: bad instruction `expression (FUNC_CALL)'
+testOutput/type_errors_functions.s:11: Error: bad instruction `found 5 type errors,exiting'

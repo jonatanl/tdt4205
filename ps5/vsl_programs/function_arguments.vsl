@@ -1,0 +1,29 @@
+VOID FUNC main() START
+    INT a;
+    INT b;
+    INT c;
+    INT d;
+
+    a := 5;
+    b := 6;
+    c := 7;
+    d := 8;
+    
+    INT e;
+    INT f;
+    
+    e := func1(a, b, c);
+    f := func2(a, b, c, d, e);
+    
+    PRINT e,f;
+END
+
+INT FUNC func1(INT x, INT y, INT z) START
+    PRINT x,y,z;
+    RETURN z;
+END
+
+INT FUNC func2(INT x, INT y, INT z, INT w, INT ae) START
+    PRINT x, y, z, w, ae;
+    RETURN z;
+END

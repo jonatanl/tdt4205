@@ -1,0 +1,9 @@
+testOutput/array_types.s: Assembler messages:
+testOutput/array_types.s:31: Error: ARM register expected -- `movw 10 Ending EXPRESSION of type NEW'
+testOutput/array_types.s:32: Error: junk at end of line, first unrecognized character is `,'
+testOutput/array_types.s:33: Error: ARM register expected -- `movt 10 Ending EXPRESSION of type NEW'
+testOutput/array_types.s:34: Error: junk at end of line, first unrecognized character is `,'
+testOutput/array_types.s:45: Error: ARM register expected -- `movw 14 Ending EXPRESSION of type NEW'
+testOutput/array_types.s:46: Error: junk at end of line, first unrecognized character is `,'
+testOutput/array_types.s:47: Error: ARM register expected -- `movt 14 Ending EXPRESSION of type NEW'
+testOutput/array_types.s:48: Error: junk at end of line, first unrecognized character is `,'

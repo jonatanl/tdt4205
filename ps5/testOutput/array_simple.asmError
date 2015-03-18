@@ -1,0 +1,5 @@
+testOutput/array_simple.s: Assembler messages:
+testOutput/array_simple.s:49: Error: ARM register expected -- `movw 18 Ending EXPRESSION of type NEW'
+testOutput/array_simple.s:50: Error: junk at end of line, first unrecognized character is `,'
+testOutput/array_simple.s:51: Error: ARM register expected -- `movt 18 Ending EXPRESSION of type NEW'
+testOutput/array_simple.s:52: Error: junk at end of line, first unrecognized character is `,'

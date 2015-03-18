@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/array_simple.s12	2015-02-25 09:43:26.000000000 +0100</span>
+<span class="plus3">+++ testOutput/array_simple.s	2015-03-18 15:24:23.985512478 +0100</span>
+<span class="at2">@@ -1 +1,144 @@</span>
+<span class="minus">-66 44 </span>
+<span class="plus">+.syntax unified</span>
+<span class="plus">+.cpu cortex-a15</span>
+<span class="plus">+.fpu vfpv3-d16</span>
+<span class="plus">+.data</span>
+<span class="plus">+.align	2</span>
+<span class="plus">+.DEBUG: .ascii "Hit Debug\n\000"</span>
+<span class="plus">+.DEBUGINT: .ascii "Hit Debug, r0 was: %d\n\000"</span>
+<span class="plus">+.INTEGER: .ascii "%d \000"</span>
+<span class="plus">+.FLOAT: .ascii "%f \000"</span>
+<span class="plus">+.NEWLINE: .ascii "\n \000"</span>
+<span class="plus">+.globl main</span>
+<span class="plus">+.align	2</span>
+<span class="plus">+.text</span>
+<span class="plus">+#0 Starting PROGRAM</span>
+<span class="plus">+#1 Starting FUNCTION (arrayTest) with depth 2</span>
+<span class="plus">+_arrayTest:</span>
+<span class="plus">+	push	{lr}</span>
+<span class="plus">+	push	{fp}</span>
+<span class="plus">+	mov	fp, sp</span>
+<span class="plus">+#2 Starting DECLARATION: adding space on stack</span>
+<span class="plus">+	push	{r0}</span>
+<span class="plus">+#3 Ending DECLARATION</span>
+<span class="plus">+#4 Starting DECLARATION: adding space on stack</span>
+<span class="plus">+	push	{r0}</span>
+<span class="plus">+#5 Ending DECLARATION</span>
+<span class="plus">+#6 Starting ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#7 Starting CONSTANT</span>
+<span class="plus">+	movw	r1, #:lower16:#66</span>
+<span class="plus">+	movt	r1, #:upper16:#66</span>
+<span class="plus">+	push	{r1}</span>
+<span class="plus">+#8 End CONSTANT</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	str	r1, [fp, #-4]</span>
+<span class="plus">+#9 End ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#10 Starting ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#11 Starting CONSTANT</span>
+<span class="plus">+	movw	r1, #:lower16:#44</span>
+<span class="plus">+	movt	r1, #:upper16:#44</span>
+<span class="plus">+	push	{r1}</span>
+<span class="plus">+#12 End CONSTANT</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	str	r1, [fp, #-8]</span>
+<span class="plus">+#13 End ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#14 Starting DECLARATION: adding space on stack</span>
+<span class="plus">+	push	{r0}</span>
+<span class="plus">+#15 Ending DECLARATION</span>
+<span class="plus">+#16 Starting ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#17 Starting EXPRESSION of type NEW</span>
+<span class="plus">+	movw	18 Ending EXPRESSION of type NEW</span>
+<span class="plus">+, #:lower16:r1</span>
+<span class="plus">+	movt	18 Ending EXPRESSION of type NEW</span>
+<span class="plus">+, #:upper16:r1</span>
+<span class="plus">+	push	{r1}</span>
+<span class="plus">+	mov	lr, pc</span>
+<span class="plus">+	bl	_malloc</span>
+<span class="plus">+	push	{r0}</span>
+<span class="plus">+#18 Ending EXPRESSION of type NEW</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	str	r1, [fp, #-12]</span>
+<span class="plus">+#19 End ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#20 Starting ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#21 Starting VARIABLE</span>
+<span class="plus">+	ldr	r1, [fp, #-4]</span>
+<span class="plus">+	push	{r1}</span>
+<span class="plus">+#22 End VARIABLE a, depth difference: 0, stack offset: -4</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	str	r1, [fp, #-12]</span>
+<span class="plus">+#23 End ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#24 Starting ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#25 Starting VARIABLE</span>
+<span class="plus">+	ldr	r1, [fp, #-8]</span>
+<span class="plus">+	push	{r1}</span>
+<span class="plus">+#26 End VARIABLE b, depth difference: 0, stack offset: -8</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	str	r1, [fp, #-12]</span>
+<span class="plus">+#27 End ASSIGNMENT_STATEMENT</span>
+<span class="plus">+#28 Starting PRINT_STATEMENT</span>
+<span class="plus">+	push	{r6}</span>
+<span class="plus">+	pop	{r6}</span>
+<span class="plus">+#29 Starting EXPRESSION of type ARRAY_INDEX</span>
+<span class="plus">+#30 Ending EXPRESSION of type ARRAY_INDEX</span>
+<span class="plus">+	movw  r0, #:lower16:.INTEGER</span>
+<span class="plus">+	movt  r0, #:upper16:.INTEGER</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	bl	printf</span>
+<span class="plus">+#31 Starting EXPRESSION of type ARRAY_INDEX</span>
+<span class="plus">+#32 Ending EXPRESSION of type ARRAY_INDEX</span>
+<span class="plus">+	movw  r0, #:lower16:.INTEGER</span>
+<span class="plus">+	movt  r0, #:upper16:.INTEGER</span>
+<span class="plus">+	pop	{r1}</span>
+<span class="plus">+	bl	printf</span>
+<span class="plus">+	movw	r0, #:lower16:0x0A</span>
+<span class="plus">+	movt	r0, #:upper16:0x0A</span>
+<span class="plus">+	bl	putchar</span>
+<span class="plus">+#33 Ending PRINT_STATEMENT</span>
+<span class="plus">+	mov	sp, fp</span>
+<span class="plus">+	pop	{fp}</span>
+<span class="plus">+	pop	{pc}</span>
+<span class="plus">+#34 Leaving FUNCTION (arrayTest) with depth 2</span>
+<span class="plus">+debugprint:</span>
+<span class="plus">+	push {r0-r11, lr}</span>
+<span class="plus">+	movw	r0, #:lower16:.DEBUG</span>
+<span class="plus">+	movt	r0, #:upper16:.DEBUG</span>
+<span class="plus">+	bl	printf</span>
+<span class="plus">+	pop {r0-r11, pc}</span>
+<span class="plus">+debugprint_r0:</span>
+<span class="plus">+	push {r0-r11, lr}</span>
+<span class="plus">+	mov	r1, r0</span>
+<span class="plus">+	movw	r0, #:lower16:.DEBUGINT</span>
+<span class="plus">+	movt	r0, #:upper16:.DEBUGINT</span>
+<span class="plus">+	bl	printf</span>
+<span class="plus">+	pop {r0-r11, pc}</span>
+<span class="plus">+_malloc:</span>
+<span class="plus">+	push	{lr}</span>
+<span class="plus">+	push	{fp}</span>
+<span class="plus">+	ldr	r0, [sp, #8]</span>
+<span class="plus">+	bl	malloc</span>
+<span class="plus">+	pop	{fp}</span>
+<span class="plus">+	pop {pc}</span>
+<span class="plus">+main:</span>
+<span class="plus">+	push	{lr}</span>
+<span class="plus">+	push	{fp}</span>
+<span class="plus">+	mov	fp, sp</span>
+<span class="plus">+	mov	r5, r0</span>
+<span class="plus">+	sub	r5, r5, #1</span>
+<span class="plus">+	cmp	r5,#0</span>
+<span class="plus">+	beq	noargs</span>
+<span class="plus">+	mov	r6, r1</span>
+<span class="plus">+pusharg:</span>
+<span class="plus">+	ldr	r0, [r6, #4]</span>
+<span class="plus">+	add	r6, r6, #4</span>
+<span class="plus">+	mov	r1, #0</span>
+<span class="plus">+	mov	r2, #10</span>
+<span class="plus">+	bl	strtol</span>
+<span class="plus">+	push	{r0}</span>
+<span class="plus">+	sub	r5, r5, #1</span>
+<span class="plus">+	cmp	r5,#0</span>
+<span class="plus">+	bne	pusharg</span>
+<span class="plus">+noargs:</span>
+<span class="plus">+#35 End PROGRAM</span>
+<span class="plus">+	mov	sp, fp</span>
+<span class="plus">+	pop	{fp}</span>
+<span class="plus">+	bl	exit</span>
+<span class="plus">+.end</span></span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Test Results</title>
+<style>
+iframe {
+		border-style:solid;
+		border-width:1px;
+	   }
+body {font-family:sans;}
+button {
+	background:none;
+	border:none;
+	}
+button:hover{
+	text-decoration:underline;
+	}
+</style>
+<script>
+myLoad = function(file, stage){
+document.getElementById('diffframe').src = ("testOutput/" + file + "." + stage + ".html")
+document.getElementById('inputframe').src = ("vsl_programs/" + file + ".vsl")
+}
+</script>
+</head>
+
+<body>
+<div style="width:15%;float:left;font-family:sans;">
+<h1>Test Report</h1>
+
+
+The output was incorrect for the following files.
+Click to see difference between your output and the correct output. <br>
+
+<button onClick=myLoad("array_hard","s12")>array_hard</button> <br>
+<button onClick=myLoad("array_simple","s12")>array_simple</button> <br>
+<button onClick=myLoad("array_types","s12")>array_types</button> <br>
+<button onClick=myLoad("function_arguments","s12")>function_arguments</button> <br>
+<button onClick=myLoad("function_minimal","s12")>function_minimal</button> <br>
+<button onClick=myLoad("function_simple","s12")>function_simple</button> <br>
+<button onClick=myLoad("hello","s12")>hello</button> <br>
+<button onClick=myLoad("strings_and_comments","s12")>strings_and_comments</button> <br>
+</div>
+<div style="width:40%;float:right;padding:5px;">
+Input:<br>
+<iframe height=95% width=100% id="inputframe" src=""></iframe>
+</div>
+
+<div style="width:40%;float:right;padding:5px;">
+Diff: <br>
+<iframe height=95% width=100% id="diffframe" src=""></iframe>
+</div>
+</body>
+
+</html>
