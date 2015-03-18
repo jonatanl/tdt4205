@@ -1,5 +1,5 @@
 --- correctOutput/array_simple.s12	2015-02-25 09:43:26.000000000 +0100
-+++ testOutput/array_simple.s	2015-03-18 15:24:23.985512478 +0100
++++ testOutput/array_simple.s	2015-03-18 15:49:39.753993596 +0100
 @@ -1 +1,144 @@
 -66 44 
 +.syntax unified
