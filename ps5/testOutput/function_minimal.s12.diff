@@ -1,5 +1,0 @@
---- correctOutput/function_minimal.s12	2015-02-26 09:02:27.000000000 +0100
-+++ testOutput/function_minimal.s12	2015-03-18 15:49:40.977993543 +0100
-@@ -1,2 +0,0 @@
--In main()
--In function()

@@ -18,8 +18,11 @@ _minimal:
 	push	{fp}
 	mov	fp, sp
 #2 Starting RETURN_STATEMENT
-#3 Starting EXPRESSION of type 
-#4 Ending EXPRESSION of type 
+#3 Starting CONSTANT
+	movw	r1, #:lower16:0
+	movt	r1, #:upper16:0
+	push	{r1}
+#4 End CONSTANT
 	pop	{r0}
 #5 End RETURN_STATEMENT
 	mov	sp, fp
@@ -66,6 +69,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_minimal
 #7 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

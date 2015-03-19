@@ -25,8 +25,8 @@ _main:
 #5 Ending DECLARATION
 #6 Starting ASSIGNMENT_STATEMENT
 #7 Starting CONSTANT
-	movw	r1, #:lower16:#5
-	movt	r1, #:upper16:#5
+	movw	r1, #:lower16:5
+	movt	r1, #:upper16:5
 	push	{r1}
 #8 End CONSTANT
 	pop	{r1}
@@ -38,6 +38,7 @@ _main:
 	ldr	r1, [fp, #-4]
 	push	{r1}
 #13 End VARIABLE a, depth difference: 0, stack offset: -4
+	mov	lr, pc
 	bl	_func
 	push	{r0}
 #14 Ending EXPRESSION of type FUNC_CALL
@@ -95,8 +96,10 @@ _func:
 	bl	putchar
 #29 Ending PRINT_STATEMENT
 #30 Starting RETURN_STATEMENT
-#31 Starting EXPRESSION of type 
-#32 Ending EXPRESSION of type 
+#31 Starting VARIABLE
+	ldr	r1, [fp, #8]
+	push	{r1}
+#32 End VARIABLE x, depth difference: 0, stack offset: 8
 	pop	{r0}
 #33 End RETURN_STATEMENT
 	mov	sp, fp
@@ -143,6 +146,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_main
 #35 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

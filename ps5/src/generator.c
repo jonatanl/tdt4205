@@ -32,8 +32,8 @@ static int nodeCounter = 0;
 // Helper functions
 char* stringConcatInt(int number);
 char* stringConcatString(int number);
-void printNode(node_t *node);
-int getArrayAddress(node_t *arrayNode, int offset);
+void getArrayAddress(node_t *arrayNode);
+void calculateNextArrayAddress(int offset);
 
 
 static void instruction_append ( instruction_t *next )
@@ -121,6 +121,16 @@ void gen_PROGRAM ( node_t *root, int scopedepth)
 	gen_default(root, scopedepth);
 
 	print_start();
+
+	// Get the first child in the children lists
+	node_t *child = root->children[0]->children[0];
+
+	// Allocate more than enough memory to keep label name in memory
+	char label[100];
+	strcpy(label, "_");
+	strcat(label, child->label);
+	instruction_add(BL, STRDUP(label), NULL, 0, 0);
+
 	tracePrint("End PROGRAM\n");
 
 	print_end();
@@ -169,21 +179,35 @@ void gen_FUNCTION ( node_t *root, int scopedepth )
 }
 
 void gen_ARRAY(int nDimensions, int* dimensions){
-	int totalBlocksNeeded = 0;
-	for (int i = 0; i < nDimensions; ++i) {
-		totalBlocksNeeded += dimensions[i];
-	}
-
-	// Allocate the blocks needed and put the result on the stack
 	char *buffer;
-	buffer = stringConcatInt(totalBlocksNeeded);
-	instruction_add(MOVE32, buffer, r1, 0, 0);
+
+	buffer = stringConcatInt(dimensions[0] * 4);
+	instruction_add(MOVE32, r1, STRDUP(buffer), 0, 0);
 	instruction_add(PUSH, r1, NULL, 0, 0);
 
 	// Prepare branching
 	instruction_add(MOV, lr, pc, 0, 0);
 	instruction_add(BL, "_malloc", NULL, 0, 0);
-	// Result from _malloc is stored in r0
+	instruction_add(POP, r6, NULL, 0, 0);
+
+	// Push address of allocated array to stack
+	instruction_add(PUSH, r0, NULL, 0, 0);
+
+	if (nDimensions > 1) {
+		for (int i = 0; i < dimensions[0]; ++i) {
+			gen_ARRAY(nDimensions - 1, &dimensions[1]);
+
+			// Retrieve address of array and store in r1
+			instruction_add(POP, r1, NULL, 0, 0);
+
+			// Retrive old array address
+			instruction_add(POP, r2, NULL, 0, 0);
+			instruction_add(STR, r1, r2, 0, 4 * i);
+
+			// Keep old array address
+			instruction_add(PUSH, r2, NULL, 0, 0);
+		}
+	}
 
 	// Free string buffer
 	free(buffer);
@@ -222,6 +246,7 @@ void gen_EXPRESSION ( node_t *root, int scopedepth )
 				}	
 			}
 			//instruction_add(MOV, lr, pc, 0, 0);
+			instruction_add(MOV, lr, pc, 0, 0);
 
 			// Allocate more than enough memory for function label
 			char label[100];
@@ -233,15 +258,21 @@ void gen_EXPRESSION ( node_t *root, int scopedepth )
 
 			// Push returned value to stack
 			instruction_add(PUSH, r0, NULL, 0, 0);
+
 			break;
+
 		case NEW_E:
 			gen_ARRAY(root->data_type.n_dimensions, root->data_type.dimensions);
 
-			// Push array address to stack
-			instruction_add(PUSH, r0, NULL, 0, 0);
 			break;
-		case ARRAY_INDEX_E:
 
+		case ARRAY_INDEX_E:
+			getArrayAddress(root);
+
+			// Convert from address to value
+			instruction_add(POP, r1, NULL, 0, 0);
+			instruction_add(LDR, r1, r1, 0, 0);
+			instruction_add(PUSH, r1, NULL, 0, 0);
 			break;
 	}
 
@@ -269,7 +300,9 @@ void gen_VARIABLE ( node_t *root, int scopedepth )
 void gen_CONSTANT (node_t * root, int scopedepth)
 {
 	tracePrint("Starting CONSTANT\n");
+
 	char *buffer;
+
 	if ( root->data_type.base_type == INT_TYPE) {
 		int integer = root->int_const;
 		// Create constant value as a string
@@ -279,6 +312,8 @@ void gen_CONSTANT (node_t * root, int scopedepth)
 		// Push value to stack
 		instruction_add(PUSH, r1, NULL, 0, 0);
 
+		// Free string buffer
+		free(buffer);
 	} else if (root->data_type.base_type == STRING_TYPE) {
 		int index = root->string_index;
 		buffer = stringConcatString(index);
@@ -287,6 +322,8 @@ void gen_CONSTANT (node_t * root, int scopedepth)
 		instruction_add(MOVE32, r1, STRDUP(buffer), 0, 0);
 		instruction_add(PUSH, r1, NULL, 0, 0);
 
+		// Free string buffer
+		free(buffer);
 	} else if (root->data_type.base_type == BOOL_TYPE) {
 		int boolValue;
 		if (root->bool_const)
@@ -299,17 +336,107 @@ void gen_CONSTANT (node_t * root, int scopedepth)
 		instruction_add(MOVE32, r1, STRDUP(buffer), 0, 0);
 		instruction_add(PUSH, r1, NULL, 0, 0);
 
+		// Free string buffer
+		free(buffer);
 	}
-
-	// Free string buffer
-	free(buffer);
 
 	tracePrint("End CONSTANT\n");
 }
 
+void gen_ASSIGNMENT_STATEMENT ( node_t *root, int scopedepth )
+{
+	tracePrint ( "Starting ASSIGNMENT_STATEMENT\n");
+
+	root->children[1]->generate(root->children[1], scopedepth);
+	// Value is saved on the stack
+
+	node_t *child = root->children[0];
+
+	if (child->nodetype.index == EXPRESSION) {
+		// if left hand side is array get address of array
+		getArrayAddress(child);
+
+		// Get array address from stack
+		instruction_add(POP, r2, NULL, 0, 0);
+		// Get array value from stack
+		instruction_add(POP, r1, NULL, 0, 0);
+
+		// Save the value from r1 to the address in r2
+		instruction_add(STR, r1, r2, 0, 0);
+	} else {
+		// Put result of right hand side in r1
+		instruction_add(POP, r1, NULL, 0, 0);
+		symbol_t *entry = root->children[0]->entry;
+		int stackOffset = entry->stack_offset;
+
+
+		// Save the new value to memory
+		instruction_add(STR, r1, fp, 0, stackOffset);
+	}
+
+	tracePrint ( "End ASSIGNMENT_STATEMENT\n");
+}
+
+void gen_RETURN_STATEMENT ( node_t *root, int scopedepth )
+{
+	tracePrint ( "Starting RETURN_STATEMENT\n");
+
+	root->children[0]->generate(root->children[0], scopedepth);
+
+	instruction_add(POP, r0, NULL, 0, 0);
+
+	tracePrint ( "End RETURN_STATEMENT\n");
+}
+
+//////////////////////////////////////////////////////////////////
+// Custom functions start
+//////////////////////////////////////////////////////////////////
+
+void getArrayAddress(node_t *arrayNode) {
+	if (arrayNode->children[0]->nodetype.index == VARIABLE) {
+		int stackOffset = arrayNode->children[0]->entry->stack_offset;
+		int offset = arrayNode->children[1]->int_const;
+
+		// Load base address to r1
+		instruction_add(LDR, r1, fp, 0, stackOffset);
+		instruction_add(PUSH, r1, NULL, 0, 0);
+
+		calculateNextArrayAddress(offset);
+	} else {
+		getArrayAddress(arrayNode->children[0]);
+
+		int offset = arrayNode->children[1]->int_const;
+		calculateNextArrayAddress(offset);
+	}
+}
+
+void calculateNextArrayAddress(int offset) {
+	// Pop base address from stack and push it to r1
+	instruction_add(POP, r1, NULL, 0, 0);
+
+	char *buffer;
+
+	// Push offset to r2
+	buffer = stringConcatInt(offset);
+	instruction_add(MOVE32, r2, STRDUP(buffer), 0, 0);
+	free(buffer);
+
+	// Push 4 constant to r3
+	buffer = stringConcatInt(4);
+	instruction_add(MOVE32, r3, STRDUP(buffer), 0, 0);
+	free(buffer);
+	
+	// Calculate: Address to pointer + offset * 4
+	instruction_add3(MUL, r2, r3, r2);
+	instruction_add3(ADD, r1, r2, r1);
+
+	// Push address to stack
+	instruction_add(PUSH, r1, NULL, 0, 0);
+}
+
 char* stringConcatInt(int integer) {
 	char *buffer = malloc(sizeof(char) * 30);
-	sprintf(buffer, "#%d", integer);
+	sprintf(buffer, "%d", integer);
 
 	return buffer;
 }
@@ -321,57 +448,9 @@ char* stringConcatString(int integer) {
 	return buffer;
 }
 
-void gen_ASSIGNMENT_STATEMENT ( node_t *root, int scopedepth )
-{
-	tracePrint ( "Starting ASSIGNMENT_STATEMENT\n");
-
-	root->children[1]->generate(root->children[1], scopedepth);
-	// Put result of right hand side in r1
-	instruction_add(POP, r1, NULL, 0, 0);
-
-	int stackOffset = 0;
-	node_t *child = root->children[0];
-
-	if (child->nodetype.index == EXPRESSION) {
-		int address = getArrayAddress(child, 0);
-		instruction_add(STR, r1, fp, 0, address);
-	} else {
-		symbol_t *entry = root->children[0]->entry;
-		stackOffset = entry->stack_offset;
-
-		// Save the new value to memory
-		instruction_add(STR, r1, fp, 0, stackOffset);
-	}
-	
-
-	tracePrint ( "End ASSIGNMENT_STATEMENT\n");
-}
-
-int getArrayAddress(node_t *arrayNode, int offset) {
-	if (arrayNode->children[0]->nodetype.index == VARIABLE) {
-		int arrayStart = arrayNode->children[0]->entry->stack_offset;
-		return arrayStart + offset;
-	} else {
-		offset += arrayNode->children[1]->int_const * 4;
-		return getArrayAddress(arrayNode->children[0], offset);
-	}
-}
-
-void gen_RETURN_STATEMENT ( node_t *root, int scopedepth )
-{
-	tracePrint ( "Starting RETURN_STATEMENT\n");
-
-	gen_EXPRESSION(root->children[0], scopedepth);
-	instruction_add(POP, r0, NULL, 0, 0);
-
-	tracePrint ( "End RETURN_STATEMENT\n");
-}
-
-void printNode(node_t *node) {
-	fprintf(stderr, "Node type: %s\n", node->nodetype.text);
-	fprintf(stderr, "Expression type: %s\n", node->expression_type.text);
-    fprintf(stderr, "Number of children: %d\n", node->n_children);
-}
+//////////////////////////////////////////////////////////////////
+// Custom functions end
+//////////////////////////////////////////////////////////////////
 
 void gen_PRINT_STATEMENT(node_t* root, int scopedepth)
 {

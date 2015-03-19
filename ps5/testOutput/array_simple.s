@@ -25,8 +25,8 @@ _arrayTest:
 #5 Ending DECLARATION
 #6 Starting ASSIGNMENT_STATEMENT
 #7 Starting CONSTANT
-	movw	r1, #:lower16:#66
-	movt	r1, #:upper16:#66
+	movw	r1, #:lower16:66
+	movt	r1, #:upper16:66
 	push	{r1}
 #8 End CONSTANT
 	pop	{r1}
@@ -34,8 +34,8 @@ _arrayTest:
 #9 End ASSIGNMENT_STATEMENT
 #10 Starting ASSIGNMENT_STATEMENT
 #11 Starting CONSTANT
-	movw	r1, #:lower16:#44
-	movt	r1, #:upper16:#44
+	movw	r1, #:lower16:44
+	movt	r1, #:upper16:44
 	push	{r1}
 #12 End CONSTANT
 	pop	{r1}
@@ -46,13 +46,12 @@ _arrayTest:
 #15 Ending DECLARATION
 #16 Starting ASSIGNMENT_STATEMENT
 #17 Starting EXPRESSION of type NEW
-	movw	18 Ending EXPRESSION of type NEW
-, #:lower16:r1
-	movt	18 Ending EXPRESSION of type NEW
-, #:upper16:r1
+	movw	r1, #:lower16:8
+	movt	r1, #:upper16:8
 	push	{r1}
 	mov	lr, pc
 	bl	_malloc
+	pop	{r6}
 	push	{r0}
 #18 Ending EXPRESSION of type NEW
 	pop	{r1}
@@ -63,27 +62,75 @@ _arrayTest:
 	ldr	r1, [fp, #-4]
 	push	{r1}
 #22 End VARIABLE a, depth difference: 0, stack offset: -4
+	ldr	r1, [fp, #-12]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #-12]
+	movw	r2, #:lower16:0
+	movt	r2, #:upper16:0
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #23 End ASSIGNMENT_STATEMENT
 #24 Starting ASSIGNMENT_STATEMENT
 #25 Starting VARIABLE
 	ldr	r1, [fp, #-8]
 	push	{r1}
 #26 End VARIABLE b, depth difference: 0, stack offset: -8
+	ldr	r1, [fp, #-12]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #-12]
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #27 End ASSIGNMENT_STATEMENT
 #28 Starting PRINT_STATEMENT
 	push	{r6}
 	pop	{r6}
 #29 Starting EXPRESSION of type ARRAY_INDEX
+	ldr	r1, [fp, #-12]
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:0
+	movt	r2, #:upper16:0
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	ldr	r1, [r1]
+	push	{r1}
 #30 Ending EXPRESSION of type ARRAY_INDEX
 	movw  r0, #:lower16:.INTEGER
 	movt  r0, #:upper16:.INTEGER
 	pop	{r1}
 	bl	printf
 #31 Starting EXPRESSION of type ARRAY_INDEX
+	ldr	r1, [fp, #-12]
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	ldr	r1, [r1]
+	push	{r1}
 #32 Ending EXPRESSION of type ARRAY_INDEX
 	movw  r0, #:lower16:.INTEGER
 	movt  r0, #:upper16:.INTEGER
@@ -137,6 +184,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_arrayTest
 #35 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

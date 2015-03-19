@@ -22,31 +22,103 @@ _main:
 #3 Ending DECLARATION
 #4 Starting ASSIGNMENT_STATEMENT
 #5 Starting EXPRESSION of type NEW
-	movw	6 Ending EXPRESSION of type NEW
-, #:lower16:r1
-	movt	6 Ending EXPRESSION of type NEW
-, #:upper16:r1
+	movw	r1, #:lower16:12
+	movt	r1, #:upper16:12
 	push	{r1}
 	mov	lr, pc
 	bl	_malloc
+	pop	{r6}
 	push	{r0}
+	movw	r1, #:lower16:12
+	movt	r1, #:upper16:12
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:12
+	movt	r1, #:upper16:12
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:12
+	movt	r1, #:upper16:12
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
 #6 Ending EXPRESSION of type NEW
 	pop	{r1}
 	str	r1, [fp, #-4]
 #7 End ASSIGNMENT_STATEMENT
 #8 Starting ASSIGNMENT_STATEMENT
 #9 Starting CONSTANT
-	movw	r1, #:lower16:#5
-	movt	r1, #:upper16:#5
+	movw	r1, #:lower16:5
+	movt	r1, #:upper16:5
 	push	{r1}
 #10 End CONSTANT
+	ldr	r1, [fp, #-4]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #4]
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #11 End ASSIGNMENT_STATEMENT
 #12 Starting PRINT_STATEMENT
 	push	{r6}
 	pop	{r6}
 #13 Starting EXPRESSION of type ARRAY_INDEX
+	ldr	r1, [fp, #-4]
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	ldr	r1, [r1]
+	push	{r1}
 #14 Ending EXPRESSION of type ARRAY_INDEX
 	movw  r0, #:lower16:.INTEGER
 	movt  r0, #:upper16:.INTEGER
@@ -61,31 +133,306 @@ _main:
 #17 Ending DECLARATION
 #18 Starting ASSIGNMENT_STATEMENT
 #19 Starting EXPRESSION of type NEW
-	movw	20 Ending EXPRESSION of type NEW
-, #:lower16:r1
-	movt	20 Ending EXPRESSION of type NEW
-, #:upper16:r1
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
 	push	{r1}
 	mov	lr, pc
 	bl	_malloc
+	pop	{r6}
 	push	{r0}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #12]
+	push	{r2}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #12]
+	push	{r2}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #12]
+	push	{r2}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #4]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #8]
+	push	{r2}
+	movw	r1, #:lower16:16
+	movt	r1, #:upper16:16
+	push	{r1}
+	mov	lr, pc
+	bl	_malloc
+	pop	{r6}
+	push	{r0}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #12]
+	push	{r2}
+	pop	{r1}
+	pop	{r2}
+	str	r1, [r2, #12]
+	push	{r2}
 #20 Ending EXPRESSION of type NEW
 	pop	{r1}
 	str	r1, [fp, #-8]
 #21 End ASSIGNMENT_STATEMENT
 #22 Starting ASSIGNMENT_STATEMENT
 #23 Starting CONSTANT
-	movw	r1, #:lower16:#10
-	movt	r1, #:upper16:#10
+	movw	r1, #:lower16:10
+	movt	r1, #:upper16:10
 	push	{r1}
 #24 End CONSTANT
+	ldr	r1, [fp, #-8]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp]
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:0
+	movt	r2, #:upper16:0
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #25 End ASSIGNMENT_STATEMENT
 #26 Starting PRINT_STATEMENT
 	push	{r6}
 	pop	{r6}
 #27 Starting EXPRESSION of type ARRAY_INDEX
+	ldr	r1, [fp, #-8]
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:0
+	movt	r2, #:upper16:0
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	ldr	r1, [r1]
+	push	{r1}
 #28 Ending EXPRESSION of type ARRAY_INDEX
 	movw  r0, #:lower16:.INTEGER
 	movt  r0, #:upper16:.INTEGER
@@ -100,6 +447,7 @@ _main:
 #31 Ending DECLARATION
 #32 Starting ASSIGNMENT_STATEMENT
 #33 Starting EXPRESSION of type FUNC_CALL
+	mov	lr, pc
 	bl	_create
 	push	{r0}
 #34 Ending EXPRESSION of type FUNC_CALL
@@ -110,6 +458,19 @@ _main:
 	push	{r6}
 	pop	{r6}
 #37 Starting EXPRESSION of type ARRAY_INDEX
+	ldr	r1, [fp, #-12]
+	push	{r1}
+	pop	{r1}
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r1}
+	ldr	r1, [r1]
+	push	{r1}
 #38 Ending EXPRESSION of type ARRAY_INDEX
 	movw  r0, #:lower16:.INTEGER
 	movt  r0, #:upper16:.INTEGER
@@ -133,13 +494,12 @@ _create:
 #43 Ending DECLARATION
 #44 Starting ASSIGNMENT_STATEMENT
 #45 Starting EXPRESSION of type NEW
-	movw	46 Ending EXPRESSION of type NEW
-, #:lower16:r1
-	movt	46 Ending EXPRESSION of type NEW
-, #:upper16:r1
+	movw	r1, #:lower16:12
+	movt	r1, #:upper16:12
 	push	{r1}
 	mov	lr, pc
 	bl	_malloc
+	pop	{r6}
 	push	{r0}
 #46 Ending EXPRESSION of type NEW
 	pop	{r1}
@@ -147,34 +507,69 @@ _create:
 #47 End ASSIGNMENT_STATEMENT
 #48 Starting ASSIGNMENT_STATEMENT
 #49 Starting CONSTANT
-	movw	r1, #:lower16:#1
-	movt	r1, #:upper16:#1
+	movw	r1, #:lower16:1
+	movt	r1, #:upper16:1
 	push	{r1}
 #50 End CONSTANT
+	ldr	r1, [fp, #-4]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #-4]
+	movw	r2, #:lower16:0
+	movt	r2, #:upper16:0
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #51 End ASSIGNMENT_STATEMENT
 #52 Starting ASSIGNMENT_STATEMENT
 #53 Starting CONSTANT
-	movw	r1, #:lower16:#2
-	movt	r1, #:upper16:#2
+	movw	r1, #:lower16:2
+	movt	r1, #:upper16:2
 	push	{r1}
 #54 End CONSTANT
+	ldr	r1, [fp, #-4]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #-4]
+	movw	r2, #:lower16:1
+	movt	r2, #:upper16:1
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #55 End ASSIGNMENT_STATEMENT
 #56 Starting ASSIGNMENT_STATEMENT
 #57 Starting CONSTANT
-	movw	r1, #:lower16:#3
-	movt	r1, #:upper16:#3
+	movw	r1, #:lower16:3
+	movt	r1, #:upper16:3
 	push	{r1}
 #58 End CONSTANT
+	ldr	r1, [fp, #-4]
+	push	{r1}
 	pop	{r1}
-	str	r1, [fp, #-4]
+	movw	r2, #:lower16:2
+	movt	r2, #:upper16:2
+	movw	r3, #:lower16:4
+	movt	r3, #:upper16:4
+	mul	r2,r3,r2
+	add	r1, r2, r1
+	push	{r1}
+	pop	{r2}
+	pop	{r1}
+	str	r1, [r2]
 #59 End ASSIGNMENT_STATEMENT
 #60 Starting RETURN_STATEMENT
-#61 Starting EXPRESSION of type 
-#62 Ending EXPRESSION of type 
+#61 Starting VARIABLE
+	ldr	r1, [fp, #-4]
+	push	{r1}
+#62 End VARIABLE a, depth difference: 0, stack offset: -4
 	pop	{r0}
 #63 End RETURN_STATEMENT
 	mov	sp, fp
@@ -221,6 +616,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_main
 #65 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

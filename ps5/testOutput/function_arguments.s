@@ -31,8 +31,8 @@ _main:
 #9 Ending DECLARATION
 #10 Starting ASSIGNMENT_STATEMENT
 #11 Starting CONSTANT
-	movw	r1, #:lower16:#5
-	movt	r1, #:upper16:#5
+	movw	r1, #:lower16:5
+	movt	r1, #:upper16:5
 	push	{r1}
 #12 End CONSTANT
 	pop	{r1}
@@ -40,8 +40,8 @@ _main:
 #13 End ASSIGNMENT_STATEMENT
 #14 Starting ASSIGNMENT_STATEMENT
 #15 Starting CONSTANT
-	movw	r1, #:lower16:#6
-	movt	r1, #:upper16:#6
+	movw	r1, #:lower16:6
+	movt	r1, #:upper16:6
 	push	{r1}
 #16 End CONSTANT
 	pop	{r1}
@@ -49,8 +49,8 @@ _main:
 #17 End ASSIGNMENT_STATEMENT
 #18 Starting ASSIGNMENT_STATEMENT
 #19 Starting CONSTANT
-	movw	r1, #:lower16:#7
-	movt	r1, #:upper16:#7
+	movw	r1, #:lower16:7
+	movt	r1, #:upper16:7
 	push	{r1}
 #20 End CONSTANT
 	pop	{r1}
@@ -58,8 +58,8 @@ _main:
 #21 End ASSIGNMENT_STATEMENT
 #22 Starting ASSIGNMENT_STATEMENT
 #23 Starting CONSTANT
-	movw	r1, #:lower16:#8
-	movt	r1, #:upper16:#8
+	movw	r1, #:lower16:8
+	movt	r1, #:upper16:8
 	push	{r1}
 #24 End CONSTANT
 	pop	{r1}
@@ -85,6 +85,7 @@ _main:
 	ldr	r1, [fp, #-12]
 	push	{r1}
 #37 End VARIABLE c, depth difference: 0, stack offset: -12
+	mov	lr, pc
 	bl	_func1
 	push	{r0}
 #38 Ending EXPRESSION of type FUNC_CALL
@@ -113,6 +114,7 @@ _main:
 	ldr	r1, [fp, #-20]
 	push	{r1}
 #51 End VARIABLE e, depth difference: 0, stack offset: -20
+	mov	lr, pc
 	bl	_func2
 	push	{r0}
 #52 Ending EXPRESSION of type FUNC_CALL
@@ -192,8 +194,10 @@ _func1:
 	bl	putchar
 #75 Ending PRINT_STATEMENT
 #76 Starting RETURN_STATEMENT
-#77 Starting EXPRESSION of type 
-#78 Ending EXPRESSION of type 
+#77 Starting VARIABLE
+	ldr	r1, [fp, #8]
+	push	{r1}
+#78 End VARIABLE z, depth difference: 0, stack offset: 8
 	pop	{r0}
 #79 End RETURN_STATEMENT
 	mov	sp, fp
@@ -268,8 +272,10 @@ _func2:
 	bl	putchar
 #103 Ending PRINT_STATEMENT
 #104 Starting RETURN_STATEMENT
-#105 Starting EXPRESSION of type 
-#106 Ending EXPRESSION of type 
+#105 Starting VARIABLE
+	ldr	r1, [fp, #16]
+	push	{r1}
+#106 End VARIABLE z, depth difference: 0, stack offset: 16
 	pop	{r0}
 #107 End RETURN_STATEMENT
 	mov	sp, fp
@@ -316,6 +322,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_main
 #109 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

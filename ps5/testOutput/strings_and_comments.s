@@ -125,6 +125,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_main
 #19 End PROGRAM
 	mov	sp, fp
 	pop	{fp}

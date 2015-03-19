@@ -36,6 +36,7 @@ _main:
 	bl	putchar
 #5 Ending PRINT_STATEMENT
 #6 Starting EXPRESSION of type FUNC_CALL
+	mov	lr, pc
 	bl	_function
 	push	{r0}
 #7 Ending EXPRESSION of type FUNC_CALL
@@ -106,6 +107,7 @@ pusharg:
 	cmp	r5,#0
 	bne	pusharg
 noargs:
+	bl	_main
 #15 End PROGRAM
 	mov	sp, fp
 	pop	{fp}
