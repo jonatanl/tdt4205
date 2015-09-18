@@ -352,12 +352,14 @@ void gen_ASSIGNMENT_STATEMENT ( node_t *root, int scopedepth )
 
 	node_t *child = root->children[0];
 
-	if (child->nodetype.index == EXPRESSION) {
+	if (child->expression_type.index == ARRAY_INDEX_E) {
 		// if left hand side is array get address of array
 		getArrayAddress(child);
 
+
 		// Get array address from stack
 		instruction_add(POP, r2, NULL, 0, 0);
+
 		// Get array value from stack
 		instruction_add(POP, r1, NULL, 0, 0);
 
@@ -366,12 +368,12 @@ void gen_ASSIGNMENT_STATEMENT ( node_t *root, int scopedepth )
 	} else {
 		// Put result of right hand side in r1
 		instruction_add(POP, r1, NULL, 0, 0);
-		symbol_t *entry = root->children[0]->entry;
+		symbol_t *entry = child->entry;
 		int stackOffset = entry->stack_offset;
-
 
 		// Save the new value to memory
 		instruction_add(STR, r1, fp, 0, stackOffset);
+		
 	}
 
 	tracePrint ( "End ASSIGNMENT_STATEMENT\n");

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/array_forloop.s10	2015-02-24 16:27:42.000000000 +0100</span>
+<span class="plus3">+++ testOutput/array_forloop.s10	2015-02-25 20:32:46.555975024 +0100</span>
+<span class="at2">@@ -1,5 +1,7 @@</span>
+ Type checking assignment
+ Type checking expression NEW
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking assignment
+ Type checking assignment
+<span class="at2">@@ -8,6 +10,8 @@</span>
+ Type checking expression +
+ Type checking expression +
+ Type checking expression *
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking assignment
+ Type checking assignment
+<span class="at2">@@ -16,7 +20,15 @@</span>
+ Type checking expression *
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (*)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking expression +
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (+)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span></span>
+</pre>
+</body>
+</html>

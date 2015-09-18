@@ -1,0 +1,15 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      PRINT_STATEMENT
+       EXPRESSION_LIST
+        VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"

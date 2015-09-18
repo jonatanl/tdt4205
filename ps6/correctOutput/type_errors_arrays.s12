@@ -1,0 +1,21 @@
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Type error at:
+ASSIGNMENT_STATEMENT
+Found 10 type errors, exiting

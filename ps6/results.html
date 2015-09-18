@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Test Results</title>
+<style>
+iframe {
+		border-style:solid;
+		border-width:1px;
+	   }
+body {font-family:sans;}
+button {
+	background:none;
+	border:none;
+	}
+button:hover{
+	text-decoration:underline;
+	}
+</style>
+<script>
+myLoad = function(file, stage){
+document.getElementById('diffframe').src = ("testOutput/" + file + "." + stage + ".html")
+document.getElementById('inputframe').src = ("vsl_programs/" + file + ".vsl")
+}
+</script>
+</head>
+
+<body>
+<div style="width:15%;float:left;font-family:sans;">
+<h1>Test Report</h1>
+
+
+The output was incorrect for the following files.
+Click to see difference between your output and the correct output. <br>
+
+<button onClick=myLoad("array_forloop","s12")>array_forloop</button> <br>
+<button onClick=myLoad("for_hard","s12")>for_hard</button> <br>
+<button onClick=myLoad("for_simple","s12")>for_simple</button> <br>
+<button onClick=myLoad("matrix_multiply","s12")>matrix_multiply</button> <br>
+<button onClick=myLoad("merge_sort","s12")>merge_sort</button> <br>
+<button onClick=myLoad("printing","s12")>printing</button> <br>
+<button onClick=myLoad("sorting","s12")>sorting</button> <br>
+</div>
+<div style="width:40%;float:right;padding:5px;">
+Input:<br>
+<iframe height=95% width=100% id="inputframe" src=""></iframe>
+</div>
+
+<div style="width:40%;float:right;padding:5px;">
+Diff: <br>
+<iframe height=95% width=100% id="diffframe" src=""></iframe>
+</div>
+</body>
+
+</html>

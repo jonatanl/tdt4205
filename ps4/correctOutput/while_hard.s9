@@ -1,0 +1,58 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     CONSTANT
+    WHILE_STATEMENT
+     EXPRESSION
+      VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+      CONSTANT
+     STATEMENT_LIST
+      DECLARATION_STATEMENT
+      ASSIGNMENT_STATEMENT
+       VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       CONSTANT
+      WHILE_STATEMENT
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        CONSTANT
+       STATEMENT_LIST
+        DECLARATION_STATEMENT
+        ASSIGNMENT_STATEMENT
+         VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+         EXPRESSION
+          CONSTANT
+        WHILE_STATEMENT
+         EXPRESSION
+          VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+          CONSTANT
+         STATEMENT_LIST
+          PRINT_STATEMENT
+           EXPRESSION_LIST
+            VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+            VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+            VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+            EXPRESSION
+             EXPRESSION
+              VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+              VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+             VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+          ASSIGNMENT_STATEMENT
+           VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+           EXPRESSION
+            VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+            CONSTANT
+        ASSIGNMENT_STATEMENT
+         VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+         EXPRESSION
+          VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+          CONSTANT
+      ASSIGNMENT_STATEMENT
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        CONSTANT

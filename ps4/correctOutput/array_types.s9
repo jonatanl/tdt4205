@@ -1,0 +1,54 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     EXPRESSION
+      TYPE
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+     EXPRESSION
+      TYPE
+    ASSIGNMENT_STATEMENT
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        CONSTANT
+       CONSTANT
+      CONSTANT
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     EXPRESSION
+      VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      CONSTANT
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+     EXPRESSION
+      VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+      CONSTANT
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        CONSTANT
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     EXPRESSION
+      VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      CONSTANT
+     VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        CONSTANT
+       CONSTANT

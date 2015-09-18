@@ -1,0 +1,4 @@
+Add strings ("Hello, world!"), index: 0 
+Add strings (""), index: 1 
+Add strings ("Hello, \"world\"!"), index: 2 
+Add strings ("//Comment"), index: 3 

@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/for_hard.s12	2015-02-25 10:43:26.000000000 +0100</span>
+<span class="plus3">+++ testOutput/for_hard.s12	2015-05-15 11:11:29.832903493 +0200</span>
+<span class="at2">@@ -1,4 +0,0 @@</span>
+<span class="minus">-2 1 </span>
+<span class="minus">-2 1 </span>
+<span class="minus">-3 1 </span>
+<span class="minus">-3 2 </span></span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,69 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+VARIABLE: access: a
+EXPRESSION: Start: NEW
+EXPRESSION: End
+DECLARATION: parameter/variable : 'i', offset: -8
+DECLARATION: parameter/variable : 'j', offset: -12
+VARIABLE: access: i
+CONSTANT
+CONSTANT
+VARIABLE: access: j
+CONSTANT
+CONSTANT
+EXPRESSION: Start: ARRAY_INDEX
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: a
+VARIABLE: access: i
+EXPRESSION: End
+VARIABLE: access: j
+EXPRESSION: End
+EXPRESSION: Start: +
+EXPRESSION: Start: +
+EXPRESSION: Start: *
+VARIABLE: access: i
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: j
+EXPRESSION: End
+CONSTANT
+EXPRESSION: End
+DECLARATION: parameter/variable : 'prod', offset: -16
+DECLARATION: parameter/variable : 'sum', offset: -20
+VARIABLE: access: sum
+CONSTANT
+VARIABLE: access: prod
+CONSTANT
+VARIABLE: access: i
+CONSTANT
+CONSTANT
+VARIABLE: access: j
+CONSTANT
+CONSTANT
+VARIABLE: access: prod
+EXPRESSION: Start: *
+VARIABLE: access: prod
+EXPRESSION: Start: ARRAY_INDEX
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: a
+VARIABLE: access: i
+EXPRESSION: End
+VARIABLE: access: j
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: sum
+EXPRESSION: Start: +
+VARIABLE: access: sum
+EXPRESSION: Start: ARRAY_INDEX
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: a
+VARIABLE: access: i
+EXPRESSION: End
+VARIABLE: access: j
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: sum
+VARIABLE: access: prod
+FUNCTION: End
+FUNCTION_LIST: End

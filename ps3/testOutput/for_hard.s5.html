@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/for_hard.s5	2015-01-13 14:15:27.000000000 +0100</span>
+<span class="plus3">+++ testOutput/for_hard.s5	2015-02-15 21:40:43.217466412 +0100</span>
+<span class="at2">@@ -3,47 +3,82 @@</span>
+   FUNCTION(VOID)("main")()
+    (nil)
+    STATEMENT_LIST()()
+<span class="minus">-    DECLARATION_STATEMENT(INT)("i")()</span>
+<span class="minus">-    FOR_STATEMENT()()</span>
+<span class="minus">-     ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-      VARIABLE()("i")()</span>
+<span class="minus">-      CONSTANT(INT)(1)()</span>
+<span class="minus">-     CONSTANT(INT)(5)()</span>
+<span class="minus">-     STATEMENT_LIST()()</span>
+<span class="minus">-      DECLARATION_STATEMENT(INT)("j")()</span>
+<span class="minus">-      FOR_STATEMENT()()</span>
+<span class="minus">-       ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-        VARIABLE()("j")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("i")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     FOR_STATEMENT()()</span>
+<span class="plus">+      ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+       EXPRESSION()(VARIABLE)</span>
+<span class="plus">+        VARIABLE()("i")()</span>
+<span class="plus">+       EXPRESSION()(CONSTANT)</span>
+         CONSTANT(INT)(1)()
+<span class="minus">-       VARIABLE()("i")()</span>
+<span class="minus">-       STATEMENT_LIST()()</span>
+<span class="minus">-        DECLARATION_STATEMENT(INT)("k")()</span>
+<span class="plus">+      EXPRESSION()(CONSTANT)</span>
+<span class="plus">+       CONSTANT(INT)(5)()</span>
+<span class="plus">+      STATEMENT_LIST()()</span>
+<span class="plus">+       STATEMENT()()</span>
+<span class="plus">+        DECLARATION_STATEMENT(INT)("j")()</span>
+<span class="plus">+       STATEMENT()()</span>
+         FOR_STATEMENT()()
+          ASSIGNMENT_STATEMENT()()
+<span class="minus">-          VARIABLE()("k")()</span>
+<span class="minus">-          CONSTANT(INT)(1)()</span>
+<span class="minus">-         VARIABLE()("j")()</span>
+<span class="plus">+          EXPRESSION()(VARIABLE)</span>
+<span class="plus">+           VARIABLE()("j")()</span>
+<span class="plus">+          EXPRESSION()(CONSTANT)</span>
+<span class="plus">+           CONSTANT(INT)(1)()</span>
+<span class="plus">+         EXPRESSION()()</span>
+<span class="plus">+          EXPRESSION()(VARIABLE)</span>
+<span class="plus">+           VARIABLE()("i")()</span>
+          STATEMENT_LIST()()
+<span class="minus">-          EXPRESSION()(FUNC_CALL)</span>
+<span class="minus">-           VARIABLE()("print")()</span>
+<span class="minus">-           EXPRESSION_LIST()()</span>
+<span class="minus">-            VARIABLE()("i")()</span>
+<span class="minus">-            VARIABLE()("j")()</span>
+<span class="minus">-            VARIABLE()("k")()</span>
+<span class="plus">+          STATEMENT()()</span>
+<span class="plus">+           DECLARATION_STATEMENT(INT)("k")()</span>
+<span class="plus">+          STATEMENT()()</span>
+<span class="plus">+           FOR_STATEMENT()()</span>
+<span class="plus">+            ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+             EXPRESSION()(VARIABLE)</span>
+<span class="plus">+              VARIABLE()("k")()</span>
+<span class="plus">+             EXPRESSION()(CONSTANT)</span>
+<span class="plus">+              CONSTANT(INT)(1)()</span>
+<span class="plus">+            EXPRESSION()()</span>
+<span class="plus">+             EXPRESSION()(VARIABLE)</span>
+<span class="plus">+              VARIABLE()("j")()</span>
+<span class="plus">+            STATEMENT_LIST()()</span>
+<span class="plus">+             STATEMENT()()</span>
+<span class="plus">+              EXPRESSION()(FUNC_CALL)</span>
+<span class="plus">+               VARIABLE()("print")()</span>
+<span class="plus">+               ARGUMENT_LIST()()</span>
+<span class="plus">+                EXPRESSION_LIST()()</span>
+<span class="plus">+                 EXPRESSION()()</span>
+<span class="plus">+                  EXPRESSION()(VARIABLE)</span>
+<span class="plus">+                   VARIABLE()("i")()</span>
+<span class="plus">+                 EXPRESSION()()</span>
+<span class="plus">+                  EXPRESSION()(VARIABLE)</span>
+<span class="plus">+                   VARIABLE()("j")()</span>
+<span class="plus">+                 EXPRESSION()()</span>
+<span class="plus">+                  EXPRESSION()(VARIABLE)</span>
+<span class="plus">+                   VARIABLE()("k")()</span>
+   FUNCTION(VOID)("print")()
+<span class="minus">-   VARIABLE_LIST()()</span>
+<span class="minus">-    DECLARATION_STATEMENT(INT)("a")()</span>
+<span class="minus">-    DECLARATION_STATEMENT(INT)("b")()</span>
+<span class="minus">-    DECLARATION_STATEMENT(INT)("c")()</span>
+<span class="plus">+   PARAMETER_LIST()()</span>
+<span class="plus">+    VARIABLE_LIST()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("a")()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("b")()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("c")()</span>
+    STATEMENT_LIST()()
+<span class="minus">-    FOR_STATEMENT()()</span>
+<span class="minus">-     ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-      VARIABLE()("a")()</span>
+<span class="minus">-      EXPRESSION()(UMINUS)</span>
+<span class="minus">-       CONSTANT(INT)(1)()</span>
+<span class="minus">-     CONSTANT(INT)(0)()</span>
+<span class="minus">-     STATEMENT_LIST()()</span>
+<span class="minus">-      PRINT_STATEMENT()()</span>
+<span class="minus">-       EXPRESSION_LIST()()</span>
+<span class="minus">-        VARIABLE()("b")()</span>
+<span class="minus">-        VARIABLE()("c")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     FOR_STATEMENT()()</span>
+<span class="plus">+      ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+       EXPRESSION()(VARIABLE)</span>
+<span class="plus">+        VARIABLE()("a")()</span>
+<span class="plus">+       EXPRESSION()(UMINUS)</span>
+<span class="plus">+        EXPRESSION()(CONSTANT)</span>
+<span class="plus">+         CONSTANT(INT)(1)()</span>
+<span class="plus">+      EXPRESSION()(CONSTANT)</span>
+<span class="plus">+       CONSTANT(INT)(0)()</span>
+<span class="plus">+      STATEMENT_LIST()()</span>
+<span class="plus">+       STATEMENT()()</span>
+<span class="plus">+        PRINT_STATEMENT()()</span>
+<span class="plus">+         EXPRESSION_LIST()()</span>
+<span class="plus">+          EXPRESSION()()</span>
+<span class="plus">+           EXPRESSION()(VARIABLE)</span>
+<span class="plus">+            VARIABLE()("b")()</span>
+<span class="plus">+          EXPRESSION()()</span>
+<span class="plus">+           EXPRESSION()(VARIABLE)</span>
+<span class="plus">+            VARIABLE()("c")()</span></span>
+</pre>
+</body>
+</html>

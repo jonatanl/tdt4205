@@ -1,0 +1,13 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+DECLARATION: parameter/variable : 'c', offset: -12
+VARIABLE: access: a
+CONSTANT
+VARIABLE: access: b
+CONSTANT
+VARIABLE: access: c
+CONSTANT
+FUNCTION: End
+FUNCTION_LIST: End

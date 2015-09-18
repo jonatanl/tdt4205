@@ -1,0 +1,70 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function func1 INT<=(INT,INT,INT) 
+Inserting function func2 INT<=(INT,INT,INT) 
+Inserting function func3 INT<=(INT,INT,INT) 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b INT depth:2 offset:-8
+Inserting variable c INT depth:2 offset:-12
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving function func1
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:16
+Inserting variable b INT depth:2 offset:12
+Inserting variable c INT depth:2 offset:8
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Inserting variable d INT depth:2 offset:-4
+Retrieving variable d
+Retrieving variable a
+Retrieving variable d
+Retrieving function func2
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:16
+Inserting variable b INT depth:2 offset:12
+Inserting variable c INT depth:2 offset:8
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Inserting variable d INT depth:2 offset:-4
+Retrieving variable d
+Retrieving variable b
+Retrieving variable d
+Retrieving function func3
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:16
+Inserting variable b INT depth:2 offset:12
+Inserting variable c INT depth:2 offset:8
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Inserting variable d INT depth:2 offset:-4
+Retrieving variable d
+Retrieving variable c
+Retrieving variable d
+Retrieving function func1
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Remove scope, index: 1 
+Remove scope, index: 0 

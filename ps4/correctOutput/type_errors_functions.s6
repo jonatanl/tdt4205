@@ -1,0 +1,36 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+VARIABLE: access: a
+EXPRESSION: Start: FUNC_CALL
+EXPRESSION: End
+VARIABLE: access: a
+EXPRESSION: Start: FUNC_CALL
+EXPRESSION: End
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: a
+EXPRESSION: End
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: b
+VARIABLE: access: a
+EXPRESSION: End
+EXPRESSION: Start: FUNC_CALL
+EXPRESSION: End
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+FUNCTION: End
+FUNCTION: Start: void_func
+CONSTANT
+FUNCTION: End
+FUNCTION: Start: bool_func
+CONSTANT
+FUNCTION: End
+FUNCTION: Start: two_args
+DECLARATION: parameter/variable : 'a', offset: 12
+DECLARATION: parameter/variable : 'b', offset: 8
+CONSTANT
+FUNCTION: End
+FUNCTION_LIST: End

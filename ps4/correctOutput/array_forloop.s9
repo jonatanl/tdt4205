@@ -1,0 +1,79 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     EXPRESSION
+      TYPE
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      FOR_STATEMENT
+       ASSIGNMENT_STATEMENT
+        VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+        CONSTANT
+       CONSTANT
+       STATEMENT_LIST
+        ASSIGNMENT_STATEMENT
+         EXPRESSION
+          EXPRESSION
+           VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+           VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+          VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+         EXPRESSION
+          EXPRESSION
+           EXPRESSION
+            VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+            CONSTANT
+           VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+          CONSTANT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("sum"), depth: 2, stack_offset: -20, entry label: "sum"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("prod"), depth: 2, stack_offset: -16, entry label: "prod"
+     CONSTANT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      FOR_STATEMENT
+       ASSIGNMENT_STATEMENT
+        VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+        CONSTANT
+       CONSTANT
+       STATEMENT_LIST
+        ASSIGNMENT_STATEMENT
+         VARIABLE, ("prod"), depth: 2, stack_offset: -16, entry label: "prod"
+         EXPRESSION
+          VARIABLE, ("prod"), depth: 2, stack_offset: -16, entry label: "prod"
+          EXPRESSION
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+            VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+           VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+        ASSIGNMENT_STATEMENT
+         VARIABLE, ("sum"), depth: 2, stack_offset: -20, entry label: "sum"
+         EXPRESSION
+          VARIABLE, ("sum"), depth: 2, stack_offset: -20, entry label: "sum"
+          EXPRESSION
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+            VARIABLE, ("i"), depth: 2, stack_offset: -8, entry label: "i"
+           VARIABLE, ("j"), depth: 2, stack_offset: -12, entry label: "j"
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      VARIABLE, ("sum"), depth: 2, stack_offset: -20, entry label: "sum"
+      VARIABLE, ("prod"), depth: 2, stack_offset: -16, entry label: "prod"

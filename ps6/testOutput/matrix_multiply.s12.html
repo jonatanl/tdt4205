@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/matrix_multiply.s12	2015-02-25 10:43:28.000000000 +0100</span>
+<span class="plus3">+++ testOutput/matrix_multiply.s12	2015-05-15 11:11:31.205590002 +0200</span>
+<span class="at2">@@ -1,3 +1,3 @@</span>
+<span class="minus">-9 6 3 </span>
+<span class="minus">-54 42 30 </span>
+<span class="minus">-99 78 57 </span>
+<span class="plus">+0 0 0 </span>
+<span class="plus">+0 0 0 </span>
+<span class="plus">+0 0 0 </span></span>
+</pre>
+</body>
+</html>

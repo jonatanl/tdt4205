@@ -1,0 +1,72 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+DECLARATION: parameter/variable : 'c', offset: -12
+DECLARATION: parameter/variable : 'd', offset: -16
+VARIABLE: access: b
+CONSTANT
+VARIABLE: access: d
+CONSTANT
+VARIABLE: access: a
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: b
+VARIABLE: access: d
+CONSTANT
+EXPRESSION: Start: +
+CONSTANT
+CONSTANT
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: Start: FUNC_CALL
+EXPRESSION: Start: &&
+CONSTANT
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: b
+VARIABLE: access: d
+CONSTANT
+CONSTANT
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: a
+VARIABLE: access: c
+FUNCTION: End
+FUNCTION: Start: func1
+DECLARATION: parameter/variable : 'a', offset: 20
+DECLARATION: parameter/variable : 'b', offset: 16
+DECLARATION: parameter/variable : 'c', offset: 12
+DECLARATION: parameter/variable : 'd', offset: 8
+EXPRESSION: Start: &&
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: a
+VARIABLE: access: d
+FUNCTION: End
+FUNCTION: Start: func2
+DECLARATION: parameter/variable : 'a', offset: 28
+DECLARATION: parameter/variable : 'b', offset: 24
+DECLARATION: parameter/variable : 'c', offset: 20
+DECLARATION: parameter/variable : 'd', offset: 16
+DECLARATION: parameter/variable : 'e', offset: 12
+DECLARATION: parameter/variable : 'f', offset: 8
+EXPRESSION: Start: ||
+EXPRESSION: Start: ||
+EXPRESSION: Start: &&
+VARIABLE: access: a
+VARIABLE: access: c
+EXPRESSION: End
+EXPRESSION: Start: >
+VARIABLE: access: b
+VARIABLE: access: d
+EXPRESSION: End
+EXPRESSION: End
+EXPRESSION: Start: >
+VARIABLE: access: e
+VARIABLE: access: f
+EXPRESSION: End
+EXPRESSION: End
+FUNCTION: End
+FUNCTION_LIST: End

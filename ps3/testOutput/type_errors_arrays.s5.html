@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/type_errors_arrays.s5	2015-01-13 14:15:27.000000000 +0100</span>
+<span class="plus3">+++ testOutput/type_errors_arrays.s5	2015-02-15 21:40:47.965466455 +0100</span>
+<span class="at2">@@ -3,47 +3,71 @@</span>
+   FUNCTION(VOID)("main")()
+    (nil)
+    STATEMENT_LIST()()
+<span class="minus">-    DECLARATION_STATEMENT(ARRAY(INT)[10])("a")()</span>
+<span class="minus">-    DECLARATION_STATEMENT(ARRAY(INT)[10][10])("b")()</span>
+<span class="minus">-    DECLARATION_STATEMENT(ARRAY(BOOL)[10])("c")()</span>
+<span class="minus">-    DECLARATION_STATEMENT(ARRAY(FLOAT)[10][10][10])("d")()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("a")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(INT)[9])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("a")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(BOOL)[10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("b")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(INT)[100])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("b")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(BOOL)[10][10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("b")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(INT)[10][9])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("c")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(FLOAT)[10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("c")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(BOOL)[10][10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("d")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(INT)[10][10][10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("d")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(FLOAT)[10][10][10][10])()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("d")()</span>
+<span class="minus">-     EXPRESSION()(NEW)</span>
+<span class="minus">-      TYPE(ARRAY(FLOAT)[10][9][11])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(ARRAY(INT)[10])("a")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(ARRAY(INT)[10][10])("b")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(ARRAY(BOOL)[10])("c")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(ARRAY(FLOAT)[10][10][10])("d")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("a")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(INT)[9])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("a")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(BOOL)[10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("b")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(INT)[100])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("b")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(BOOL)[10][10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("b")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(INT)[10][9])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("c")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(FLOAT)[10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("c")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(BOOL)[10][10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("d")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(INT)[10][10][10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("d")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(FLOAT)[10][10][10][10])()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("d")()</span>
+<span class="plus">+      EXPRESSION()(NEW)</span>
+<span class="plus">+       TYPE(ARRAY(FLOAT)[10][9][11])()</span></span>
+</pre>
+</body>
+</html>

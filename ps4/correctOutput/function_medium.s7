@@ -1,0 +1,48 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function func1 INT<=(INT,BOOL,BOOL,INT) 
+Inserting function func2 BOOL<=(BOOL,INT,BOOL,INT,INT,INT) 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b INT depth:2 offset:-8
+Inserting variable c BOOL depth:2 offset:-12
+Inserting variable d BOOL depth:2 offset:-16
+Retrieving variable b
+Retrieving variable d
+Retrieving variable a
+Retrieving function func1
+Retrieving variable b
+Retrieving variable d
+Retrieving variable c
+Retrieving function func2
+Retrieving variable b
+Retrieving variable d
+Retrieving variable a
+Retrieving variable c
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:20
+Inserting variable b BOOL depth:2 offset:16
+Inserting variable c BOOL depth:2 offset:12
+Inserting variable d INT depth:2 offset:8
+Retrieving variable b
+Retrieving variable c
+Retrieving variable a
+Retrieving variable d
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a BOOL depth:2 offset:28
+Inserting variable b INT depth:2 offset:24
+Inserting variable c BOOL depth:2 offset:20
+Inserting variable d INT depth:2 offset:16
+Inserting variable e INT depth:2 offset:12
+Inserting variable f INT depth:2 offset:8
+Retrieving variable a
+Retrieving variable c
+Retrieving variable b
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Remove scope, index: 1 
+Remove scope, index: 0 

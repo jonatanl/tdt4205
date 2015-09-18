@@ -1,0 +1,171 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+DECLARATION: parameter/variable : 'c', offset: -12
+DECLARATION: parameter/variable : 'd', offset: -16
+DECLARATION: parameter/variable : 'e', offset: -20
+DECLARATION: parameter/variable : 'f', offset: -24
+VARIABLE: access: a
+CONSTANT
+VARIABLE: access: b
+CONSTANT
+VARIABLE: access: c
+CONSTANT
+VARIABLE: access: d
+EXPRESSION: Start: &&
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: &&
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: &&
+VARIABLE: access: c
+VARIABLE: access: a
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: ||
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: ||
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: ||
+VARIABLE: access: c
+VARIABLE: access: a
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: !
+VARIABLE: access: a
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: !
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: !
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: &&
+VARIABLE: access: a
+EXPRESSION: Start: !
+VARIABLE: access: b
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: &&
+VARIABLE: access: b
+EXPRESSION: Start: !
+VARIABLE: access: c
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: &&
+VARIABLE: access: c
+EXPRESSION: Start: !
+VARIABLE: access: a
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: ||
+EXPRESSION: Start: !
+VARIABLE: access: a
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: ||
+EXPRESSION: Start: !
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: ||
+EXPRESSION: Start: !
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: a
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: &&
+EXPRESSION: Start: &&
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: ||
+EXPRESSION: Start: ||
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: ||
+EXPRESSION: Start: &&
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+VARIABLE: access: d
+EXPRESSION: Start: ||
+VARIABLE: access: a
+EXPRESSION: Start: &&
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: e
+EXPRESSION: Start: &&
+EXPRESSION: Start: ||
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: f
+EXPRESSION: Start: ||
+VARIABLE: access: a
+EXPRESSION: Start: &&
+VARIABLE: access: b
+EXPRESSION: Start: !
+VARIABLE: access: c
+EXPRESSION: End
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: d
+VARIABLE: access: e
+VARIABLE: access: f
+FUNCTION: End
+FUNCTION_LIST: End

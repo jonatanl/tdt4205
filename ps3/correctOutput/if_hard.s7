@@ -1,0 +1,8 @@
+Add strings ("A is different from 10"), index: 0 
+Add strings ("B is different from -15"), index: 1 
+Add strings ("B equals -15"), index: 2 
+Add strings ("This never happens..."), index: 3 
+Add strings ("a >0, b > 0"), index: 4 
+Add strings ("a > 0, b <= 0"), index: 5 
+Add strings ("a <= 0, b > 0"), index: 6 
+Add strings ("a <= 0, b <= 0"), index: 7 

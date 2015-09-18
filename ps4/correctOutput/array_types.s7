@@ -1,0 +1,19 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[3][4][5] depth:2 offset:-4
+Inserting variable b ARRAY(INT)[4][5] depth:2 offset:-8
+Inserting variable c ARRAY(INT)[5] depth:2 offset:-12
+Retrieving variable a
+Retrieving variable c
+Retrieving variable a
+Retrieving variable c
+Retrieving variable b
+Retrieving variable a
+Retrieving variable b
+Retrieving variable b
+Retrieving variable c
+Retrieving variable b
+Remove scope, index: 1 
+Remove scope, index: 0 

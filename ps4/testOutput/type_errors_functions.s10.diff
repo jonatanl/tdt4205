@@ -1,0 +1,22 @@
+--- correctOutput/type_errors_functions.s10	2015-02-24 16:27:42.000000000 +0100
++++ testOutput/type_errors_functions.s10	2015-02-25 20:32:47.719975035 +0100
+@@ -9,10 +9,18 @@
+ Type checking expression FUNC_CALL
+ Type error at:
+ EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type checking expression FUNC_CALL
+-Type checking expression FUNC_CALL
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type error at:
+ EXPRESSION (FUNC_CALL)
+ Type checking expression FUNC_CALL
++Type checking expression FUNC_CALL
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type error at:
+ EXPRESSION (FUNC_CALL)

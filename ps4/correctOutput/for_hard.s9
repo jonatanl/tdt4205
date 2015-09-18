@@ -1,0 +1,49 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      DECLARATION_STATEMENT
+      FOR_STATEMENT
+       ASSIGNMENT_STATEMENT
+        VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+        CONSTANT
+       VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+       STATEMENT_LIST
+        DECLARATION_STATEMENT
+        FOR_STATEMENT
+         ASSIGNMENT_STATEMENT
+          VARIABLE, ("k"), depth: 2, stack_offset: -12, entry label: "k"
+          CONSTANT
+         VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+         STATEMENT_LIST
+          EXPRESSION
+           VARIABLE, ("print"), (nil)
+           EXPRESSION_LIST
+            VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+            VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+            VARIABLE, ("k"), depth: 2, stack_offset: -12, entry label: "k"
+  FUNCTION, ("print"), (nil)
+   VARIABLE_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+   STATEMENT_LIST
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("a"), depth: 2, stack_offset: 16, entry label: "a"
+      EXPRESSION
+       CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      PRINT_STATEMENT
+       EXPRESSION_LIST
+        VARIABLE, ("b"), depth: 2, stack_offset: 12, entry label: "b"
+        VARIABLE, ("c"), depth: 2, stack_offset: 8, entry label: "c"

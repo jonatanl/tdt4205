@@ -1,0 +1,38 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+DECLARATION: parameter/variable : 'c', offset: -12
+DECLARATION: parameter/variable : 'd', offset: -16
+VARIABLE: access: a
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: a
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: NEW
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: NEW
+EXPRESSION: End
+FUNCTION: End
+FUNCTION_LIST: End

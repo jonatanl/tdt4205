@@ -1,0 +1,35 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[3][3] depth:2 offset:-4
+Retrieving variable a
+Inserting variable i INT depth:2 offset:-8
+Inserting variable j INT depth:2 offset:-12
+Retrieving variable i
+Retrieving variable j
+Retrieving variable a
+Retrieving variable i
+Retrieving variable j
+Retrieving variable i
+Retrieving variable j
+Inserting variable prod INT depth:2 offset:-16
+Inserting variable sum INT depth:2 offset:-20
+Retrieving variable sum
+Retrieving variable prod
+Retrieving variable i
+Retrieving variable j
+Retrieving variable prod
+Retrieving variable prod
+Retrieving variable a
+Retrieving variable i
+Retrieving variable j
+Retrieving variable sum
+Retrieving variable sum
+Retrieving variable a
+Retrieving variable i
+Retrieving variable j
+Retrieving variable sum
+Retrieving variable prod
+Remove scope, index: 1 
+Remove scope, index: 0 

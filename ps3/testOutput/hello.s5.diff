@@ -1,0 +1,14 @@
+--- correctOutput/hello.s5	2015-01-13 14:15:27.000000000 +0100
++++ testOutput/hello.s5	2015-02-15 21:40:44.185466421 +0100
+@@ -3,6 +3,8 @@
+   FUNCTION(VOID)("hello")()
+    (nil)
+    STATEMENT_LIST()()
+-    PRINT_STATEMENT()()
+-     EXPRESSION_LIST()()
+-      CONSTANT(STRING)("Hello, world!")()
++    STATEMENT()()
++     PRINT_STATEMENT()()
++      EXPRESSION_LIST()()
++       EXPRESSION()(CONSTANT)
++        CONSTANT(STRING)("Hello, world!")()

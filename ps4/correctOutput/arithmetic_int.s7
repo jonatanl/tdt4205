@@ -1,0 +1,134 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b INT depth:2 offset:-8
+Inserting variable c INT depth:2 offset:-12
+Inserting variable d INT depth:2 offset:-16
+Inserting variable e INT depth:2 offset:-20
+Inserting variable f INT depth:2 offset:-24
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable a
+Retrieving variable e
+Retrieving variable b
+Retrieving variable f
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable e
+Retrieving variable a
+Retrieving variable c
+Retrieving variable f
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable e
+Retrieving variable a
+Retrieving variable c
+Retrieving variable f
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable e
+Retrieving variable a
+Retrieving variable c
+Retrieving variable f
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable e
+Retrieving variable a
+Retrieving variable c
+Retrieving variable f
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable e
+Retrieving variable a
+Retrieving variable c
+Retrieving variable f
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable e
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable e
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable e
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable f
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Retrieving variable d
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable e
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable f
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Retrieving variable e
+Retrieving variable f
+Remove scope, index: 1 
+Remove scope, index: 0 

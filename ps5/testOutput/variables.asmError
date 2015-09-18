@@ -1,5 +1,5 @@
-/tmp/ccM6agPs.o: In function `_main':
+/tmp/ccHPAiTY.o: In function `_main':
 (.text+0x2c): undefined reference to `.STRING1'
-/tmp/ccM6agPs.o: In function `_main':
+/tmp/ccHPAiTY.o: In function `_main':
 (.text+0x30): undefined reference to `.STRING1'
 collect2: error: ld returned 1 exit status

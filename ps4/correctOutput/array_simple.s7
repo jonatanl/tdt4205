@@ -1,0 +1,18 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function arrayTest VOID<=() 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b INT depth:2 offset:-8
+Retrieving variable a
+Retrieving variable b
+Inserting variable array ARRAY(INT)[2] depth:2 offset:-12
+Retrieving variable array
+Retrieving variable array
+Retrieving variable a
+Retrieving variable array
+Retrieving variable b
+Retrieving variable array
+Retrieving variable array
+Remove scope, index: 1 
+Remove scope, index: 0 

@@ -1,0 +1,103 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function merge_sort VOID<=(ARRAY(INT)[100],INT,INT) 
+Inserting function merge VOID<=(ARRAY(INT)[100],INT,INT,INT) 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[100] depth:2 offset:-4
+Retrieving variable a
+Inserting variable i INT depth:2 offset:-8
+Retrieving variable i
+Retrieving variable a
+Retrieving variable i
+Retrieving variable i
+Retrieving function merge_sort
+Retrieving variable a
+Retrieving variable i
+Retrieving variable a
+Retrieving variable i
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[100] depth:2 offset:16
+Inserting variable start INT depth:2 offset:12
+Inserting variable end INT depth:2 offset:8
+Retrieving variable end
+Retrieving variable start
+Inserting variable middle INT depth:2 offset:-4
+Retrieving variable middle
+Retrieving variable start
+Retrieving variable end
+Retrieving variable start
+Retrieving function merge_sort
+Retrieving variable a
+Retrieving variable start
+Retrieving variable middle
+Retrieving function merge_sort
+Retrieving variable a
+Retrieving variable middle
+Retrieving variable end
+Retrieving function merge
+Retrieving variable a
+Retrieving variable start
+Retrieving variable middle
+Retrieving variable end
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[100] depth:2 offset:20
+Inserting variable start INT depth:2 offset:16
+Inserting variable middle INT depth:2 offset:12
+Inserting variable end INT depth:2 offset:8
+Inserting variable temp ARRAY(INT)[100] depth:2 offset:-4
+Retrieving variable temp
+Inserting variable i INT depth:2 offset:-8
+Inserting variable j INT depth:2 offset:-12
+Retrieving variable i
+Retrieving variable start
+Retrieving variable j
+Retrieving variable middle
+Inserting variable k INT depth:2 offset:-16
+Retrieving variable k
+Retrieving variable start
+Retrieving variable end
+Retrieving variable i
+Retrieving variable middle
+Retrieving variable temp
+Retrieving variable k
+Retrieving variable a
+Retrieving variable j
+Retrieving variable j
+Retrieving variable j
+Retrieving variable j
+Retrieving variable end
+Retrieving variable temp
+Retrieving variable k
+Retrieving variable a
+Retrieving variable i
+Retrieving variable i
+Retrieving variable i
+Retrieving variable a
+Retrieving variable j
+Retrieving variable a
+Retrieving variable i
+Retrieving variable temp
+Retrieving variable k
+Retrieving variable a
+Retrieving variable j
+Retrieving variable j
+Retrieving variable j
+Retrieving variable temp
+Retrieving variable k
+Retrieving variable a
+Retrieving variable i
+Retrieving variable i
+Retrieving variable i
+Inserting variable n INT depth:2 offset:-20
+Retrieving variable n
+Retrieving variable start
+Retrieving variable end
+Retrieving variable a
+Retrieving variable n
+Retrieving variable temp
+Retrieving variable n
+Remove scope, index: 1 
+Remove scope, index: 0 

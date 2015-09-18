@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/minimal.s5	2015-01-13 14:15:27.000000000 +0100</span>
+<span class="plus3">+++ testOutput/minimal.s5	2015-02-15 21:40:47.041466447 +0100</span>
+<span class="at2">@@ -3,5 +3,7 @@</span>
+   FUNCTION(INT)("minimal")()
+    (nil)
+    STATEMENT_LIST()()
+<span class="minus">-    RETURN_STATEMENT()()</span>
+<span class="minus">-     CONSTANT(INT)(0)()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     RETURN_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(CONSTANT)</span>
+<span class="plus">+       CONSTANT(INT)(0)()</span></span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,45 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function sort ARRAY(INT)[10]<=(ARRAY(INT)[10]) 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[10] depth:2 offset:-4
+Inserting variable b ARRAY(INT)[10] depth:2 offset:-8
+Retrieving variable a
+Inserting variable i INT depth:2 offset:-12
+Retrieving variable i
+Retrieving variable a
+Retrieving variable i
+Retrieving variable i
+Retrieving variable b
+Retrieving function sort
+Retrieving variable a
+Retrieving variable i
+Retrieving variable b
+Retrieving variable i
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a ARRAY(INT)[10] depth:2 offset:8
+Inserting variable i INT depth:2 offset:-4
+Inserting variable j INT depth:2 offset:-8
+Inserting variable temp INT depth:2 offset:-12
+Retrieving variable i
+Retrieving variable j
+Retrieving variable i
+Retrieving variable a
+Retrieving variable j
+Retrieving variable a
+Retrieving variable i
+Retrieving variable temp
+Retrieving variable a
+Retrieving variable i
+Retrieving variable a
+Retrieving variable i
+Retrieving variable a
+Retrieving variable j
+Retrieving variable a
+Retrieving variable j
+Retrieving variable temp
+Retrieving variable a
+Remove scope, index: 1 
+Remove scope, index: 0 

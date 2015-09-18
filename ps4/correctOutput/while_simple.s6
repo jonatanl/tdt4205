@@ -1,0 +1,17 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: a
+VARIABLE: access: a
+EXPRESSION: Start: -
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+FUNCTION: End
+FUNCTION_LIST: End

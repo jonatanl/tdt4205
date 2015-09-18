@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/fibonacci_recursive.s5	2015-01-13 14:15:27.000000000 +0100</span>
+<span class="plus3">+++ testOutput/fibonacci_recursive.s5	2015-02-15 21:40:43.041466410 +0100</span>
+<span class="at2">@@ -1,56 +1,103 @@</span>
+  PROGRAM()()
+  FUNCTION_LIST()()
+   FUNCTION(INT)("fibonacci_recursive")()
+<span class="minus">-   VARIABLE_LIST()()</span>
+<span class="minus">-    DECLARATION_STATEMENT(INT)("n")()</span>
+<span class="plus">+   PARAMETER_LIST()()</span>
+<span class="plus">+    VARIABLE_LIST()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("n")()</span>
+    STATEMENT_LIST()()
+<span class="minus">-    DECLARATION_STATEMENT(INT)("f")()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("f")()</span>
+<span class="minus">-     EXPRESSION()(FUNC_CALL)</span>
+<span class="minus">-      VARIABLE()("fibonacci_number")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("f")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("f")()</span>
+<span class="plus">+      EXPRESSION()()</span>
+<span class="plus">+       EXPRESSION()(FUNC_CALL)</span>
+<span class="plus">+        VARIABLE()("fibonacci_number")()</span>
+<span class="plus">+        ARGUMENT_LIST()()</span>
+<span class="plus">+         EXPRESSION_LIST()()</span>
+<span class="plus">+          EXPRESSION()()</span>
+<span class="plus">+           EXPRESSION()(VARIABLE)</span>
+<span class="plus">+            VARIABLE()("n")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     PRINT_STATEMENT()()</span>
+       EXPRESSION_LIST()()
+<span class="minus">-       VARIABLE()("n")()</span>
+<span class="minus">-    PRINT_STATEMENT()()</span>
+<span class="minus">-     EXPRESSION_LIST()()</span>
+<span class="minus">-      CONSTANT(STRING)("The")()</span>
+<span class="minus">-      VARIABLE()("n")()</span>
+<span class="minus">-      CONSTANT(STRING)("th fibonacci number is")()</span>
+<span class="minus">-      VARIABLE()("f")()</span>
+<span class="minus">-    RETURN_STATEMENT()()</span>
+<span class="minus">-     CONSTANT(INT)(0)()</span>
+<span class="plus">+       EXPRESSION()(CONSTANT)</span>
+<span class="plus">+        CONSTANT(STRING)("The")()</span>
+<span class="plus">+       EXPRESSION()()</span>
+<span class="plus">+        EXPRESSION()(VARIABLE)</span>
+<span class="plus">+         VARIABLE()("n")()</span>
+<span class="plus">+       EXPRESSION()(CONSTANT)</span>
+<span class="plus">+        CONSTANT(STRING)("th fibonacci number is")()</span>
+<span class="plus">+       EXPRESSION()()</span>
+<span class="plus">+        EXPRESSION()(VARIABLE)</span>
+<span class="plus">+         VARIABLE()("f")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     RETURN_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(CONSTANT)</span>
+<span class="plus">+       CONSTANT(INT)(0)()</span>
+   FUNCTION(INT)("fibonacci_number")()
+<span class="minus">-   VARIABLE_LIST()()</span>
+<span class="minus">-    DECLARATION_STATEMENT(INT)("n")()</span>
+<span class="plus">+   PARAMETER_LIST()()</span>
+<span class="plus">+    VARIABLE_LIST()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("n")()</span>
+    STATEMENT_LIST()()
+<span class="minus">-    DECLARATION_STATEMENT(INT)("y")()</span>
+<span class="minus">-    ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("y")()</span>
+<span class="minus">-     CONSTANT(INT)(1)()</span>
+<span class="minus">-    IF_STATEMENT()()</span>
+<span class="minus">-     EXPRESSION()(-)</span>
+<span class="minus">-      VARIABLE()("n")()</span>
+<span class="minus">-      CONSTANT(INT)(1)()</span>
+<span class="minus">-     STATEMENT_LIST()()</span>
+<span class="minus">-      IF_STATEMENT()()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     DECLARATION_STATEMENT(INT)("y")()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()(VARIABLE)</span>
+<span class="plus">+       VARIABLE()("y")()</span>
+<span class="plus">+      EXPRESSION()(CONSTANT)</span>
+<span class="plus">+       CONSTANT(INT)(1)()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     IF_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()()</span>
+        EXPRESSION()(-)
+<span class="minus">-        VARIABLE()("n")()</span>
+<span class="minus">-        CONSTANT(INT)(2)()</span>
+<span class="minus">-       STATEMENT_LIST()()</span>
+<span class="minus">-        ASSIGNMENT_STATEMENT()()</span>
+<span class="minus">-         VARIABLE()("y")()</span>
+<span class="minus">-         EXPRESSION()(+)</span>
+<span class="minus">-          EXPRESSION()(FUNC_CALL)</span>
+<span class="minus">-           VARIABLE()("fibonacci_number")()</span>
+<span class="minus">-           EXPRESSION_LIST()()</span>
+<span class="minus">-            EXPRESSION()(-)</span>
+<span class="plus">+        EXPRESSION()()</span>
+<span class="plus">+         EXPRESSION()(VARIABLE)</span>
+<span class="plus">+          VARIABLE()("n")()</span>
+<span class="plus">+        EXPRESSION()(CONSTANT)</span>
+<span class="plus">+         CONSTANT(INT)(1)()</span>
+<span class="plus">+      STATEMENT_LIST()()</span>
+<span class="plus">+       STATEMENT()()</span>
+<span class="plus">+        IF_STATEMENT()()</span>
+<span class="plus">+         EXPRESSION()()</span>
+<span class="plus">+          EXPRESSION()(-)</span>
+<span class="plus">+           EXPRESSION()()</span>
+<span class="plus">+            EXPRESSION()(VARIABLE)</span>
+              VARIABLE()("n")()
+<span class="minus">-             CONSTANT(INT)(1)()</span>
+<span class="minus">-          EXPRESSION()(FUNC_CALL)</span>
+<span class="minus">-           VARIABLE()("fibonacci_number")()</span>
+<span class="minus">-           EXPRESSION_LIST()()</span>
+<span class="minus">-            EXPRESSION()(-)</span>
+<span class="minus">-             VARIABLE()("n")()</span>
+<span class="minus">-             CONSTANT(INT)(2)()</span>
+<span class="minus">-    RETURN_STATEMENT()()</span>
+<span class="minus">-     VARIABLE()("y")()</span>
+<span class="plus">+           EXPRESSION()(CONSTANT)</span>
+<span class="plus">+            CONSTANT(INT)(2)()</span>
+<span class="plus">+         STATEMENT_LIST()()</span>
+<span class="plus">+          STATEMENT()()</span>
+<span class="plus">+           ASSIGNMENT_STATEMENT()()</span>
+<span class="plus">+            EXPRESSION()(VARIABLE)</span>
+<span class="plus">+             VARIABLE()("y")()</span>
+<span class="plus">+            EXPRESSION()(+)</span>
+<span class="plus">+             EXPRESSION()()</span>
+<span class="plus">+              EXPRESSION()(FUNC_CALL)</span>
+<span class="plus">+               VARIABLE()("fibonacci_number")()</span>
+<span class="plus">+               ARGUMENT_LIST()()</span>
+<span class="plus">+                EXPRESSION_LIST()()</span>
+<span class="plus">+                 EXPRESSION()(-)</span>
+<span class="plus">+                  EXPRESSION()()</span>
+<span class="plus">+                   EXPRESSION()(VARIABLE)</span>
+<span class="plus">+                    VARIABLE()("n")()</span>
+<span class="plus">+                  EXPRESSION()(CONSTANT)</span>
+<span class="plus">+                   CONSTANT(INT)(1)()</span>
+<span class="plus">+             EXPRESSION()()</span>
+<span class="plus">+              EXPRESSION()(FUNC_CALL)</span>
+<span class="plus">+               VARIABLE()("fibonacci_number")()</span>
+<span class="plus">+               ARGUMENT_LIST()()</span>
+<span class="plus">+                EXPRESSION_LIST()()</span>
+<span class="plus">+                 EXPRESSION()(-)</span>
+<span class="plus">+                  EXPRESSION()()</span>
+<span class="plus">+                   EXPRESSION()(VARIABLE)</span>
+<span class="plus">+                    VARIABLE()("n")()</span>
+<span class="plus">+                  EXPRESSION()(CONSTANT)</span>
+<span class="plus">+                   CONSTANT(INT)(2)()</span>
+<span class="plus">+    STATEMENT()()</span>
+<span class="plus">+     RETURN_STATEMENT()()</span>
+<span class="plus">+      EXPRESSION()()</span>
+<span class="plus">+       EXPRESSION()(VARIABLE)</span>
+<span class="plus">+        VARIABLE()("y")()</span></span>
+</pre>
+</body>
+</html>

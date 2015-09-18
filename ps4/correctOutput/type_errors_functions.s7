@@ -1,0 +1,32 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function void_func VOID<=() 
+Inserting function bool_func BOOL<=() 
+Inserting function two_args VOID<=(BOOL,INT) 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b BOOL depth:2 offset:-8
+Retrieving variable a
+Retrieving function void_func
+Retrieving variable a
+Retrieving function bool_func
+Retrieving function two_args
+Retrieving variable a
+Retrieving function two_args
+Retrieving variable b
+Retrieving variable a
+Retrieving function two_args
+Retrieving function void_func
+Retrieving variable a
+Retrieving variable b
+Remove scope, index: 1 
+Add scope, index: 2 
+Remove scope, index: 1 
+Add scope, index: 2 
+Remove scope, index: 1 
+Add scope, index: 2 
+Inserting variable a BOOL depth:2 offset:12
+Inserting variable b INT depth:2 offset:8
+Remove scope, index: 1 
+Remove scope, index: 0 

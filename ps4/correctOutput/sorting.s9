@@ -1,0 +1,89 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     EXPRESSION
+      TYPE
+    DECLARATION_STATEMENT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -12, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      ASSIGNMENT_STATEMENT
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        VARIABLE, ("i"), depth: 2, stack_offset: -12, entry label: "i"
+       EXPRESSION
+        CONSTANT
+        VARIABLE, ("i"), depth: 2, stack_offset: -12, entry label: "i"
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+     EXPRESSION
+      VARIABLE, ("sort"), (nil)
+      EXPRESSION_LIST
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -12, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      PRINT_STATEMENT
+       EXPRESSION_LIST
+        EXPRESSION
+         VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+         VARIABLE, ("i"), depth: 2, stack_offset: -12, entry label: "i"
+  FUNCTION, ("sort"), (nil)
+   VARIABLE_LIST
+    DECLARATION_STATEMENT
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    FOR_STATEMENT
+     ASSIGNMENT_STATEMENT
+      VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+      CONSTANT
+     CONSTANT
+     STATEMENT_LIST
+      FOR_STATEMENT
+       ASSIGNMENT_STATEMENT
+        VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+        VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+       CONSTANT
+       STATEMENT_LIST
+        IF_STATEMENT
+         EXPRESSION
+          EXPRESSION
+           VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+           VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+          EXPRESSION
+           VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+           VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+         STATEMENT_LIST
+          ASSIGNMENT_STATEMENT
+           VARIABLE, ("temp"), depth: 2, stack_offset: -12, entry label: "temp"
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+            VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+          ASSIGNMENT_STATEMENT
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+            VARIABLE, ("i"), depth: 2, stack_offset: -4, entry label: "i"
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+            VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+          ASSIGNMENT_STATEMENT
+           EXPRESSION
+            VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"
+            VARIABLE, ("j"), depth: 2, stack_offset: -8, entry label: "j"
+           VARIABLE, ("temp"), depth: 2, stack_offset: -12, entry label: "temp"
+    RETURN_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: 8, entry label: "a"

@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/merge_sort.s10	2015-02-24 16:27:42.000000000 +0100</span>
+<span class="plus3">+++ testOutput/merge_sort.s10	2015-02-25 20:32:47.347975031 +0100</span>
+<span class="at2">@@ -1,10 +1,16 @@</span>
+ Type checking assignment
+ Type checking expression NEW
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression -
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking expression FUNC_CALL
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression &lt;=
+<span class="at2">@@ -14,10 +20,32 @@</span>
+ Type checking expression /
+ Type checking expression -
+ Type checking expression FUNC_CALL
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+ Type checking expression FUNC_CALL
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+ Type checking expression FUNC_CALL
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+ Type checking assignment
+ Type checking expression NEW
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking assignment
+ Type checking assignment
+<span class="at2">@@ -25,28 +53,40 @@</span>
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking expression +
+ Type checking expression &gt;=
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking expression +
+ Type checking expression &lt;
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (&lt;)</span>
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking expression +
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span>
+ Type checking assignment
+ Type checking expression +
+ Type checking assignment
+ Type checking assignment
+ Type checking expression ARRAY_INDEX
+ Type checking expression ARRAY_INDEX
+<span class="plus">+Type error at:</span>
+<span class="plus">+ASSIGNMENT_STATEMENT</span></span>
+</pre>
+</body>
+</html>

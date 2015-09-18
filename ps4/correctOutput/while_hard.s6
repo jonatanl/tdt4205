@@ -1,0 +1,52 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+DECLARATION: parameter/variable : 'b', offset: -8
+VARIABLE: access: b
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: b
+CONSTANT
+EXPRESSION: End
+DECLARATION: parameter/variable : 'c', offset: -12
+VARIABLE: access: c
+EXPRESSION: Start: UMINUS
+CONSTANT
+EXPRESSION: End
+EXPRESSION: Start: <
+VARIABLE: access: c
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: a
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: Start: *
+EXPRESSION: Start: *
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: Start: +
+VARIABLE: access: c
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: Start: -
+VARIABLE: access: b
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: a
+EXPRESSION: Start: -
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+FUNCTION: End
+FUNCTION_LIST: End

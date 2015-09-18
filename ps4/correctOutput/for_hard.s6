@@ -1,0 +1,33 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'i', offset: -4
+VARIABLE: access: i
+CONSTANT
+CONSTANT
+DECLARATION: parameter/variable : 'j', offset: -8
+VARIABLE: access: j
+CONSTANT
+VARIABLE: access: i
+DECLARATION: parameter/variable : 'k', offset: -12
+VARIABLE: access: k
+CONSTANT
+VARIABLE: access: j
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: i
+VARIABLE: access: j
+VARIABLE: access: k
+EXPRESSION: End
+FUNCTION: End
+FUNCTION: Start: print
+DECLARATION: parameter/variable : 'a', offset: 16
+DECLARATION: parameter/variable : 'b', offset: 12
+DECLARATION: parameter/variable : 'c', offset: 8
+VARIABLE: access: a
+EXPRESSION: Start: UMINUS
+CONSTANT
+EXPRESSION: End
+CONSTANT
+VARIABLE: access: b
+VARIABLE: access: c
+FUNCTION: End
+FUNCTION_LIST: End

@@ -1,0 +1,45 @@
+--- correctOutput/function_hard.s10	2015-02-24 16:27:42.000000000 +0100
++++ testOutput/function_hard.s10	2015-02-25 20:32:47.011975028 +0100
+@@ -2,18 +2,42 @@
+ Type checking assignment
+ Type checking assignment
+ Type checking expression FUNC_CALL
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type checking assignment
+ Type checking expression >
+ Type checking assignment
+ Type checking expression FUNC_CALL
+ Type checking expression -
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type checking assignment
+ Type checking expression >
+ Type checking assignment
+ Type checking expression FUNC_CALL
+ Type checking expression -
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
+ Type checking assignment
+ Type checking expression >
+ Type checking assignment
+ Type checking expression FUNC_CALL
+ Type checking expression -
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)
++Type error at:
++EXPRESSION (FUNC_CALL)

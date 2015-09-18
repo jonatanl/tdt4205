@@ -1,0 +1,320 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+     EXPRESSION
+      CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("d"), depth: 2, stack_offset: -16, entry label: "d"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("e"), depth: 2, stack_offset: -20, entry label: "e"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("f"), depth: 2, stack_offset: -24, entry label: "f"
+     CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      EXPRESSION
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+      EXPRESSION
+       VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+     EXPRESSION
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       EXPRESSION
+        CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+     EXPRESSION
+      EXPRESSION
+       VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      EXPRESSION
+       EXPRESSION
+        CONSTANT
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+      VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+      VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+      VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+      VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+      VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        EXPRESSION
+         EXPRESSION
+          VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+          CONSTANT
+         CONSTANT
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         CONSTANT
+         VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        EXPRESSION
+         EXPRESSION
+          VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      EXPRESSION
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        EXPRESSION
+         VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+         VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       EXPRESSION
+        EXPRESSION
+         VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+         EXPRESSION
+          VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         VARIABLE, ("d"), depth: 2, stack_offset: -16, entry label: "d"
+         VARIABLE, ("e"), depth: 2, stack_offset: -20, entry label: "e"
+        EXPRESSION
+         VARIABLE, ("f"), depth: 2, stack_offset: -24, entry label: "f"
+         CONSTANT
+       EXPRESSION
+        CONSTANT
+        CONSTANT
+      EXPRESSION
+       CONSTANT
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         EXPRESSION
+          EXPRESSION
+           VARIABLE, ("d"), depth: 2, stack_offset: -16, entry label: "d"
+        EXPRESSION
+         EXPRESSION
+          VARIABLE, ("e"), depth: 2, stack_offset: -20, entry label: "e"
+       EXPRESSION
+        EXPRESSION
+         VARIABLE, ("f"), depth: 2, stack_offset: -24, entry label: "f"
+        CONSTANT
+      EXPRESSION
+       EXPRESSION
+        CONSTANT
+        CONSTANT
+       EXPRESSION
+        EXPRESSION
+         CONSTANT
+        CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+       EXPRESSION
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+        EXPRESSION
+         CONSTANT
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         VARIABLE, ("d"), depth: 2, stack_offset: -16, entry label: "d"
+         VARIABLE, ("e"), depth: 2, stack_offset: -20, entry label: "e"
+       EXPRESSION
+        EXPRESSION
+         EXPRESSION
+          VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+          CONSTANT
+        EXPRESSION
+         VARIABLE, ("d"), depth: 2, stack_offset: -16, entry label: "d"
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+      VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+      VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+      VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+      VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+      VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+     EXPRESSION
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      EXPRESSION
+       VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+       CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+     EXPRESSION
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+     EXPRESSION
+      EXPRESSION
+       VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+       EXPRESSION
+        VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+      CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        CONSTANT
+        CONSTANT
+       EXPRESSION
+        EXPRESSION
+         CONSTANT
+         CONSTANT
+        CONSTANT
+      CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         EXPRESSION
+          CONSTANT
+          CONSTANT
+         CONSTANT
+        CONSTANT
+       CONSTANT
+      CONSTANT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"
+     EXPRESSION
+      EXPRESSION
+       EXPRESSION
+        EXPRESSION
+         VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+         VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+        EXPRESSION
+         EXPRESSION
+          CONSTANT
+          VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+         EXPRESSION
+          VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+          VARIABLE, ("c"), depth: 2, stack_offset: -12, entry label: "c"
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        EXPRESSION
+         CONSTANT
+      EXPRESSION
+       EXPRESSION
+        VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+        EXPRESSION
+         CONSTANT
+    PRINT_STATEMENT
+     EXPRESSION_LIST
+      VARIABLE, ("g"), depth: 2, stack_offset: -28, entry label: "g"
+      VARIABLE, ("h"), depth: 2, stack_offset: -32, entry label: "h"
+      VARIABLE, ("i"), depth: 2, stack_offset: -36, entry label: "i"
+      VARIABLE, ("j"), depth: 2, stack_offset: -40, entry label: "j"
+      VARIABLE, ("k"), depth: 2, stack_offset: -44, entry label: "k"
+      VARIABLE, ("l"), depth: 2, stack_offset: -48, entry label: "l"

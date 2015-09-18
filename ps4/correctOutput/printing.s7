@@ -1,0 +1,22 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Add scope, index: 2 
+Inserting variable a INT depth:2 offset:-4
+Inserting variable b BOOL depth:2 offset:-8
+Inserting variable c BOOL depth:2 offset:-12
+Inserting variable d FLOAT depth:2 offset:-16
+Retrieving variable a
+Retrieving variable b
+Retrieving variable c
+Retrieving variable d
+Add strings ("True "), index: 0 
+Retrieving variable c
+Add strings ("+-10 "), index: 1 
+Retrieving variable a
+Add strings ("False "), index: 2 
+Retrieving variable b
+Add strings ("+-0.4 "), index: 3 
+Retrieving variable d
+Remove scope, index: 1 
+Remove scope, index: 0 

@@ -1,0 +1,12 @@
+Add scope, index: 0 
+Add scope, index: 1 
+Inserting function main VOID<=() 
+Inserting function function VOID<=() 
+Add scope, index: 2 
+Add strings ("In main()"), index: 0 
+Retrieving function function
+Remove scope, index: 1 
+Add scope, index: 2 
+Add strings ("In function()"), index: 1 
+Remove scope, index: 1 
+Remove scope, index: 0 

@@ -1,0 +1,28 @@
+.syntax unified
+.cpu cortex-a15
+.fpu vfpv3-d16
+.data
+.align	2
+.DEBUG: .ascii "Hit Debug\n\000"
+.DEBUGINT: .ascii "Hit Debug, r0 was: %d\n\000"
+.INTEGER: .ascii "%d \000"
+.FLOAT: .ascii "%f \000"
+.NEWLINE: .ascii "\n \000"
+.STRING0: .ascii "A is different from 10"
+.ascii "\000"
+.STRING1: .ascii "B is different from -15"
+.ascii "\000"
+.STRING2: .ascii "B equals -15"
+.ascii "\000"
+.STRING3: .ascii "This never happens..."
+.ascii "\000"
+.STRING4: .ascii "a >0, b > 0"
+.ascii "\000"
+.STRING5: .ascii "a > 0, b <= 0"
+.ascii "\000"
+.STRING6: .ascii "a <= 0, b > 0"
+.ascii "\000"
+.STRING7: .ascii "a <= 0, b <= 0"
+.ascii "\000"
+.globl main
+.align	2

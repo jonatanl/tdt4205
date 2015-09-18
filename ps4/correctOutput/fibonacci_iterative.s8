@@ -1,0 +1,16 @@
+.syntax unified
+.cpu cortex-a15
+.fpu vfpv3-d16
+.data
+.align	2
+.DEBUG: .ascii "Hit Debug\n\000"
+.DEBUGINT: .ascii "Hit Debug, r0 was: %d\n\000"
+.INTEGER: .ascii "%d \000"
+.FLOAT: .ascii "%f \000"
+.NEWLINE: .ascii "\n \000"
+.STRING0: .ascii "Fibonacci number #"
+.ascii "\000"
+.STRING1: .ascii "is "
+.ascii "\000"
+.globl main
+.align	2

@@ -1,0 +1,93 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: main
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+DECLARATION: parameter/variable : 'c', offset: -12
+VARIABLE: access: a
+CONSTANT
+VARIABLE: access: b
+CONSTANT
+VARIABLE: access: c
+CONSTANT
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: a
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+FUNCTION: End
+FUNCTION: Start: func1
+DECLARATION: parameter/variable : 'a', offset: 16
+DECLARATION: parameter/variable : 'b', offset: 12
+DECLARATION: parameter/variable : 'c', offset: 8
+VARIABLE: access: a
+VARIABLE: access: b
+VARIABLE: access: c
+DECLARATION: parameter/variable : 'd', offset: -4
+VARIABLE: access: d
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: FUNC_CALL
+EXPRESSION: Start: -
+VARIABLE: access: a
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: b
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: d
+FUNCTION: End
+FUNCTION: Start: func2
+DECLARATION: parameter/variable : 'a', offset: 16
+DECLARATION: parameter/variable : 'b', offset: 12
+DECLARATION: parameter/variable : 'c', offset: 8
+VARIABLE: access: a
+VARIABLE: access: b
+VARIABLE: access: c
+DECLARATION: parameter/variable : 'd', offset: -4
+VARIABLE: access: d
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: b
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: a
+EXPRESSION: Start: -
+VARIABLE: access: b
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: c
+EXPRESSION: End
+VARIABLE: access: d
+FUNCTION: End
+FUNCTION: Start: func3
+DECLARATION: parameter/variable : 'a', offset: 16
+DECLARATION: parameter/variable : 'b', offset: 12
+DECLARATION: parameter/variable : 'c', offset: 8
+VARIABLE: access: a
+VARIABLE: access: b
+VARIABLE: access: c
+DECLARATION: parameter/variable : 'd', offset: -4
+VARIABLE: access: d
+CONSTANT
+EXPRESSION: Start: >
+VARIABLE: access: c
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: d
+EXPRESSION: Start: FUNC_CALL
+VARIABLE: access: a
+VARIABLE: access: b
+EXPRESSION: Start: -
+VARIABLE: access: c
+CONSTANT
+EXPRESSION: End
+EXPRESSION: End
+VARIABLE: access: d
+FUNCTION: End
+FUNCTION_LIST: End

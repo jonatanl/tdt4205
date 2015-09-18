@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Colorized Diff</title>
+</head>
+<style>
+.diffdiv  { border: solid 1px black;           }
+.comment  { color: gray;                       }
+.diff     { color: #8A2BE2;                    }
+.minus3   { color: blue;                       }
+.plus3    { color: maroon;                     }
+.at2      { color: lime;                       }
+.plus     { color: green; background: #E7E7E7; }
+.minus    { color: red;   background: #D7D7D7; }
+.only     { color: purple;                     }
+</style>
+<body>
+<pre>
+<span class="comment"><span class="minus3">--- correctOutput/maxmin.s10	2015-02-24 16:27:42.000000000 +0100</span>
+<span class="plus3">+++ testOutput/maxmin.s10	2015-02-25 20:32:47.315975031 +0100</span>
+<span class="at2">@@ -3,6 +3,8 @@</span>
+ Type checking assignment
+ Type checking expression FUNC_CALL
+ Type checking expression UMINUS
+<span class="plus">+Type error at:</span>
+<span class="plus">+EXPRESSION (FUNC_CALL)</span>
+ Type checking assignment
+ Type checking expression FUNC_CALL
+ Type checking expression &gt;</span>
+</pre>
+</body>
+</html>

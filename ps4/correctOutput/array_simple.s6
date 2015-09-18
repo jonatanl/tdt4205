@@ -1,0 +1,32 @@
+FUNCTION_LIST: Start
+FUNCTION: Start: arrayTest
+DECLARATION: parameter/variable : 'a', offset: -4
+DECLARATION: parameter/variable : 'b', offset: -8
+VARIABLE: access: a
+CONSTANT
+VARIABLE: access: b
+CONSTANT
+DECLARATION: parameter/variable : 'array', offset: -12
+VARIABLE: access: array
+EXPRESSION: Start: NEW
+EXPRESSION: End
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: array
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: a
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: array
+CONSTANT
+EXPRESSION: End
+VARIABLE: access: b
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: array
+CONSTANT
+EXPRESSION: End
+EXPRESSION: Start: ARRAY_INDEX
+VARIABLE: access: array
+CONSTANT
+EXPRESSION: End
+FUNCTION: End
+FUNCTION_LIST: End

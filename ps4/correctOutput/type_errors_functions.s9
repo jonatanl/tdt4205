@@ -1,0 +1,51 @@
+ PROGRAM
+ FUNCTION_LIST
+  FUNCTION, ("main"), (nil)
+   (nil)
+   STATEMENT_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     EXPRESSION
+      VARIABLE, ("void_func"), (nil)
+      (nil)
+    ASSIGNMENT_STATEMENT
+     VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+     EXPRESSION
+      VARIABLE, ("bool_func"), (nil)
+      (nil)
+    EXPRESSION
+     VARIABLE, ("two_args"), (nil)
+     EXPRESSION_LIST
+      VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+    EXPRESSION
+     VARIABLE, ("two_args"), (nil)
+     EXPRESSION_LIST
+      VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+      VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+    EXPRESSION
+     VARIABLE, ("two_args"), (nil)
+     (nil)
+    EXPRESSION
+     VARIABLE, ("void_func"), (nil)
+     EXPRESSION_LIST
+      VARIABLE, ("a"), depth: 2, stack_offset: -4, entry label: "a"
+      VARIABLE, ("b"), depth: 2, stack_offset: -8, entry label: "b"
+  FUNCTION, ("void_func"), (nil)
+   (nil)
+   STATEMENT_LIST
+    RETURN_STATEMENT
+     CONSTANT
+  FUNCTION, ("bool_func"), (nil)
+   (nil)
+   STATEMENT_LIST
+    RETURN_STATEMENT
+     CONSTANT
+  FUNCTION, ("two_args"), (nil)
+   VARIABLE_LIST
+    DECLARATION_STATEMENT
+    DECLARATION_STATEMENT
+   STATEMENT_LIST
+    RETURN_STATEMENT
+     CONSTANT
